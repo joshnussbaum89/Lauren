@@ -1,0 +1,126 @@
+---
+import Navigation from './Navigation.astro'
+---
+
+<header>
+  <Navigation />
+  <div class="header-content">
+    <div class="signature">
+      <img src="/curved-name.svg" alt="Curved name text" />
+      <img src="/lauren-headshot.png" alt="Lauren Vogelstein Headshot" />
+    </div>
+    <div class="info">
+      <p>
+        I am a <span>postdoctoral associate</span> at NYU in the department of Teaching & Learning and
+        recieved my PhD in Learning & Design from Vanderbilt University.
+      </p>
+      <p>
+        My scholarship centers on widening the resources made available for <span
+          >learning and doing STEM</span
+        > in order to provide spaces where youth feel the expressiveness of their joint sensemaking is
+        valued and nurtured.
+      </p>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    position: relative;
+    background: var(--gradient-blue-purple);
+  }
+
+  /* @media (min-width: 1024px) {
+    header {
+      clip-path: ellipse(100% 100% at 50% 0%);
+      margin-bottom: 8rem;
+    }
+  } */
+
+  p {
+    font-size: var(--size-lg);
+    line-height: 2rem;
+  }
+
+  .header-content {
+    animation: var(--transition-long) 0s 1 fadeIn;
+  }
+
+  @media (min-width: 1024px) {
+    .header-content {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .signature {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .signature img:nth-child(1) {
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: -2rem;
+  }
+
+  .signature img:nth-child(2) {
+    width: 75%;
+    max-width: 300px;
+  }
+
+  .info {
+    align-self: flex-end;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+
+  @media (min-width: 1024px) {
+    .info {
+      margin-bottom: 10rem;
+      padding: 1rem;
+      text-align: left;
+      color: var(--color-white);
+      background-color: transparent;
+    }
+  }
+
+  .info p {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .info p:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  .info p:nth-of-type(1) span {
+    color: var(--color-light-green);
+  }
+
+  @media (min-width: 1024px) {
+    .info p:nth-of-type(1) span {
+      color: var(--color-extra-light-green);
+    }
+  }
+
+  .info p:nth-of-type(2) span {
+    color: var(--color-light-pink);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      visibility: none;
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+</style>

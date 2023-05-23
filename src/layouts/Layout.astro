@@ -1,0 +1,176 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: 'Cooper Bold';
+    src: url('./fonts/CooperBT-Bold.woff2') format('woff2'),
+      url('./fonts/CooperBT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Cooper Light Italic';
+    src: url('./fonts/CooperBT-LightItalic.woff2') format('woff2'),
+      url('./fonts/CooperBT-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Cooper Bold Italic';
+    src: url('./fonts/CooperBT-BoldItalic.woff2') format('woff2'),
+      url('./fonts/CooperBT-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Cooper Light';
+    src: url('./fonts/CooperBT-Light.woff2') format('woff2'),
+      url('./fonts/CooperBT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --font-cooper-light: 'Cooper Light', sans-serif;
+    --font-cooper-bold: 'Cooper Bold', sans-serif;
+    --font-cooper-light-italic: 'Cooper Light Italic', sans-serif;
+    --font-cooper-bold-italic: 'Cooper Bold Italic', sans-serif;
+
+    --color-black: #000;
+    --color-black-faded: #2e3438;
+    --color-grey: #f5f5f5;
+    --color-white: #fff;
+    --color-green: #283700;
+    --color-light-green: #597600;
+    --color-extra-light-green: #e3e9d2;
+    --color-light-green-transparent: #59760050;
+    --color-pink: #ba0038;
+    --color-light-pink: #ff5c97;
+    --color-light-pink-transparent: #ff5c9850;
+    --color-purple: #848dad;
+    --color-purple-transparent: #848dad50;
+    --color-box-shadow: #00000033;
+    --color-blue: #5b7eae;
+
+    --gradient-blue-purple: linear-gradient(-45deg, var(--color-blue) 25%, var(--color-purple));
+
+    --size-sm: 0.875rem; /* line-height: 1.25rem */
+    --size-base: 1rem; /* line-height: 1.5rem */
+    --size-lg: 1.5rem; /* line-height: 2rem */
+    --size-xl: 2.25rem; /* line-height: 2.5rem */
+    --size-xxl: 3rem;
+    --size-xxxl: 3.75rem;
+    --size-section-header: clamp(2rem, 5vw, 4rem);
+
+    --transition-normal: 0.25s ease-in-out;
+    --transition-long: 1s ease-in-out;
+    --transition-natural: cubic-bezier(0.34, -0.26, 0.28, 1.25);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-cooper-light);
+    box-sizing: border-box;
+  }
+
+  body[data-overlay-displayed='true'] {
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-cooper-bold);
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var(--size-xl);
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: var(--size-section-header);
+    text-align: center;
+  }
+
+  ul,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  li,
+  p {
+    font-size: var(--size-base);
+    line-height: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button {
+    font-family: var(--font-cooper-bold);
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  @media (min-width: 1100px) {
+    .mobile {
+      display: none;
+    }
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  @media (min-width: 1100px) {
+    .desktop {
+      display: block;
+    }
+  }
+
+  #about,
+  #research {
+    padding: 10rem 1rem;
+  }
+</style>

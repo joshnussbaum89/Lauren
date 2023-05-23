@@ -1,0 +1,149 @@
+<section id="about" class="about">
+  <div class="stage">
+    <div class="title-card">
+      <h3>Childhood</h3>
+      <img src="/1.png" alt="Lauren dancing during her childhood" />
+    </div>
+    <p>
+      I began dancing at a young age and also became enamored with counting, organizing, and pattern
+      making.
+    </p>
+  </div>
+  <div class="stage">
+    <div class="title-card">
+      <h3>College</h3>
+      <img src="/2.png" alt="Lauren dancing during her college years" />
+    </div>
+    <p>
+      My love of dance and math brought me to NYC where I received my BFA in dance and BS in math
+      from The Ailey School & Fordham University.
+    </p>
+  </div>
+  <div class="stage">
+    <div class="title-card">
+      <h3>Dissertation Research</h3>
+      <img src="/3.png" alt="Lauren wearing a GoPro camera during her dissertation research" />
+    </div>
+    <p>
+      I received my PhD in Learning Sciences from the Deparment of Teach & Learning in Peabody
+      College at Vanderbilt University, advised by Rogers Hall & Corey Brady. My research focused on
+      choreographic ways of knowing sites for STEM learning, design, and analysis.
+    </p>
+  </div>
+  <div class="stage">
+    <div class="title-card">
+      <h3>Masters</h3>
+      <img src="/4.png" alt="Lauren and her friend posing while pursing their masters degree" />
+    </div>
+    <p>
+      I went on to work at MoMath where I worked as an educator and developed a movement based math
+      curriculum. I went on to earn my MA in Learning Sciences at Northwestern University.
+    </p>
+  </div>
+</section>
+
+<style>
+  .stage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .stage:not(:last-child) {
+    margin: 0 auto 15rem;
+  }
+
+  @media (min-width: 1024px) {
+    .stage {
+      flex-direction: row;
+      gap: 8rem;
+      max-width: 1000px;
+    }
+
+    .stage:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .title-card {
+    position: relative;
+    width: 100%;
+    height: clamp(200px, 50vw, 400px);
+    background-color: var(--color-extra-light-green);
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .title-card {
+      width: 50%;
+    }
+  }
+
+  .stage:nth-of-type(2) .title-card {
+    background-color: var(--color-purple-transparent);
+  }
+
+  .stage:nth-of-type(3) .title-card {
+    background-color: var(--color-light-pink-transparent);
+  }
+
+  .title-card h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: var(--size-xl);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 var(--color-black-faded);
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  @media (min-width: 1024px) {
+    .title-card h3 {
+      font-size: var(--size-xxl);
+    }
+  }
+
+  .title-card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+  }
+
+  @media (min-width: 1024px) {
+    .title-card img {
+      width: 75%;
+    }
+  }
+
+  .stage p {
+    font-size: var(--size-base);
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .stage p {
+      width: 50%;
+      font-size: var(--size-lg);
+      line-height: 2rem;
+    }
+
+    .stage:nth-child(odd) p {
+      text-align: right;
+    }
+
+    .stage:nth-child(even) p {
+      text-align: left;
+    }
+  }
+</style>

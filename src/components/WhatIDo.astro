@@ -1,9 +1,4 @@
 <section id="research" class="diagram">
-  <h2>What I Do</h2>
-  <p>
-    I work to widen the resources made available for learning and doing STEM in order to provide
-    spaces where youth feel the expressiveness of their joint sense-making is valued and nurtured.
-  </p>
   <div class="diagram-wrapper">
     <!-- ARTS -->
     <div id="arts" class="circle">
@@ -84,6 +79,26 @@
 </section>
 
 <style>
+  .mobile {
+    display: block;
+  }
+
+  @media (min-width: 1100px) {
+    .mobile {
+      display: none;
+    }
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  @media (min-width: 1100px) {
+    .desktop {
+      display: block;
+    }
+  }
+
   .diagram {
     display: flex;
     flex-direction: column;

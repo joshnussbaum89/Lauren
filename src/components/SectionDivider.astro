@@ -1,22 +1,45 @@
 ---
 export interface Props {
   title: string
+  theme?: 'green' | 'pink' | 'blue' | 'purple'
+  imageUrl: string
+  isArrow?: boolean
+  hasDescription?: boolean
 }
 
-const { title } = Astro.props
+const { title, theme, imageUrl, isArrow, hasDescription } = Astro.props
 ---
 
-<div class="divider">
+<div
+  class:list={[
+    'divider',
+    {
+      arrow: isArrow,
+      green: theme === 'green',
+      pink: theme === 'pink',
+      blue: theme === 'blue',
+      purple: theme === 'purple',
+    },
+  ]}
+  style={`background-image: url(${imageUrl});`}
+>
   <h2>{title}</h2>
+  {
+    hasDescription && (
+      <p>
+        I work to widen the resources made available for learning and doing STEM in order to provide
+        spaces where youth feel the expressiveness of their joint sense-making is valued and
+        nurtured.
+      </p>
+    )
+  }
 </div>
 
 <style>
   .divider {
     min-height: 50vh;
-    background: url('/dancing-green.jpeg');
     background-size: cover;
     background-attachment: fixed;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +47,43 @@ const { title } = Astro.props
     color: var(--color-white);
   }
 
-  .divider h2 {
-    text-shadow: 2px 2px 0 var(--color-black-faded);
+  .arrow {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+
+  h2 {
+    text-shadow: 2px 2px 0 var(--color-black);
+  }
+
+  .green h2 {
+    text-shadow: 2px 2px 0 var(--color-light-green);
+  }
+
+  .pink h2 {
+    text-shadow: 2px 2px 0 var(--color-light-pink);
+  }
+
+  .blue h2 {
+    text-shadow: 2px 2px 0 var(--color-blue);
+  }
+
+  .purple h2 {
+    text-shadow: 2px 2px 0 var(--color-purple);
+  }
+
+  p {
+    max-width: 700px;
+    padding: 1rem;
+    font-size: var(--size-md);
+    line-height: 1.75rem;
+    text-align: center;
+    text-shadow: 1px 1px 0 var(--color-black);
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: var(--size-lg);
+      line-height: 2rem;
+    }
   }
 </style>

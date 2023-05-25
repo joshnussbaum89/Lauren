@@ -1,5 +1,5 @@
 <section id="about" class="about">
-  <div class="stage">
+  <div class="step">
     <div class="title-card">
       <h3>Childhood</h3>
       <img src="/1.png" alt="Lauren dancing during her childhood" />
@@ -9,7 +9,11 @@
       making.
     </p>
   </div>
-  <div class="stage">
+  <div class="arrows">
+    <img src="/arrow-mobile-right-1.svg" alt="Dashed arrow pointing to next step" />
+    <img src="/arrow-desktop-left-1.svg" alt="Dashed arrow pointing to next step" />
+  </div>
+  <div class="step">
     <div class="title-card">
       <h3>College</h3>
       <img src="/2.png" alt="Lauren dancing during her college years" />
@@ -19,7 +23,11 @@
       from The Ailey School & Fordham University.
     </p>
   </div>
-  <div class="stage">
+  <div class="arrows">
+    <img src="/arrow-mobile-left-2.svg" alt="Dashed arrow pointing to next step" />
+    <img src="/arrow-desktop-right-1.svg" alt="Dashed arrow pointing to next step" />
+  </div>
+  <div class="step">
     <div class="title-card">
       <h3>Dissertation Research</h3>
       <img src="/3.png" alt="Lauren wearing a GoPro camera during her dissertation research" />
@@ -30,7 +38,11 @@
       choreographic ways of knowing sites for STEM learning, design, and analysis.
     </p>
   </div>
-  <div class="stage">
+  <div class="arrows">
+    <img src="/arrow-mobile-wiggle-1.svg" alt="Dashed arrow pointing to next step" />
+    <img src="/arrow-desktop-left-2.svg" alt="Dashed arrow pointing to next step" />
+  </div>
+  <div class="step">
     <div class="title-card">
       <h3>Masters</h3>
       <img src="/4.png" alt="Lauren and her friend posing while pursing their masters degree" />
@@ -40,110 +52,228 @@
       curriculum. I went on to earn my MA in Learning Sciences at Northwestern University.
     </p>
   </div>
-</section>
+  <div class="arrows">
+    <img src="/arrow-mobile-wiggle-2.svg" alt="Dashed arrow pointing to next step" />
+    <img src="/arrow-desktop-right-2.svg" alt="Dashed arrow pointing to next step" />
+  </div>
+  <div class="last-step">
+    <div class="content">
+      <p>
+        I am now a postdoctoral associate at NYU working on the Pila-CS project to support teachers
+        to incorporate CS with a translanguaging lens into their classrooms. In this position, I am
+        a Lucas Education Foundation postdoctoral fellow, focusing on the study and design of equity
+        oriented learning environments.
+      </p>
+      <p>
+        In addition to my postdoctoral work, I am a co-PI on the three-year NSF project
+        Choreographing Sciences (Award #2115773)
+      </p>
+    </div>
+    <button>View CV</button>
+  </div>
 
-<style>
-  .stage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .stage:not(:last-child) {
-    margin: 0 auto 15rem;
-  }
-
-  @media (min-width: 1024px) {
-    .stage {
-      flex-direction: row;
-      gap: 8rem;
-      max-width: 1000px;
+  <style>
+    .about {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12vw;
     }
 
-    .stage:nth-child(odd) {
-      flex-direction: row-reverse;
+    @media (min-width: 1024px) {
+      .about {
+        gap: 8vw;
+      }
     }
-  }
 
-  .title-card {
-    position: relative;
-    width: 100%;
-    height: clamp(200px, 50vw, 400px);
-    background-color: var(--color-extra-light-green);
-    border-radius: 1rem;
-  }
+    .arrows {
+      display: block;
+      width: 10vw;
+      max-width: 600px;
+      margin: auto;
+    }
 
-  @media (min-width: 1024px) {
+    .arrows img:nth-of-type(2) {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .arrows {
+        width: 60vw;
+      }
+
+      .arrows img:nth-of-type(1) {
+        display: none;
+      }
+
+      .arrows img:nth-of-type(2) {
+        display: block;
+      }
+    }
+
+    .arrows img {
+      width: 100%;
+    }
+
+    .step {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1024px) {
+      .step {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8rem;
+        max-width: 1000px;
+      }
+
+      .step:nth-of-type(1),
+      .step:nth-of-type(5) {
+        flex-direction: row-reverse;
+      }
+    }
+
     .title-card {
-      width: 50%;
+      position: relative;
+      width: 100%;
+      height: clamp(200px, 50vw, 400px);
+      background-color: var(--color-extra-light-green);
+      border-radius: 1rem;
+      box-shadow: 2px 2px 8px var(--color-box-shadow);
     }
-  }
 
-  .stage:nth-of-type(2) .title-card {
-    background-color: var(--color-purple-transparent);
-  }
+    @media (min-width: 1024px) {
+      .title-card {
+        width: 50%;
+      }
+    }
 
-  .stage:nth-of-type(3) .title-card {
-    background-color: var(--color-light-pink-transparent);
-  }
+    .step:nth-of-type(3) .title-card {
+      background-color: var(--color-purple-transparent);
+    }
 
-  .title-card h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: var(--size-xl);
-    text-transform: uppercase;
-    text-shadow: 2px 2px 0 var(--color-black-faded);
-    text-align: center;
-    color: var(--color-white);
-  }
+    .step:nth-of-type(5) .title-card {
+      background-color: var(--color-light-pink-transparent);
+    }
 
-  @media (min-width: 1024px) {
     .title-card h3 {
-      font-size: var(--size-xxl);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      font-size: var(--size-xl);
+      text-transform: uppercase;
+      text-shadow: 2px 2px 0 var(--color-black-faded);
+      text-align: center;
+      color: var(--color-white);
     }
-  }
 
-  .title-card img {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-  }
+    @media (min-width: 1024px) {
+      .title-card h3 {
+        font-size: var(--size-xxl);
+      }
+    }
 
-  @media (min-width: 1024px) {
     .title-card img {
-      width: 75%;
-    }
-  }
-
-  .stage p {
-    font-size: var(--size-base);
-    text-align: center;
-  }
-
-  @media (min-width: 1024px) {
-    .stage p {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 50%;
+    }
+
+    @media (min-width: 1024px) {
+      .title-card img {
+        width: 75%;
+      }
+    }
+
+    .step p {
+      font-size: var(--size-base);
+      text-align: center;
+      color: var(--color-black-faded);
+      padding: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .step p {
+        width: 50%;
+        font-size: var(--size-lg);
+        line-height: 2rem;
+        padding: 0;
+      }
+
+      .step:nth-of-type(1) p,
+      .step:nth-of-type(5) p {
+        text-align: right;
+      }
+
+      .step:nth-of-type(3) p,
+      .step:nth-of-type(7) p {
+        text-align: left;
+      }
+    }
+
+    .last-step {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .last-step {
+        max-width: 1000px;
+      }
+    }
+
+    .last-step .content {
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border: 2px solid var(--color-black-faded);
+      border-radius: 5px;
+      box-shadow: 4px 4px 0 var(--color-black-faded);
+    }
+
+    .last-step .content p {
+      font-size: var(--size-base);
+      color: var(--color-black-faded);
+    }
+
+    .last-step .content p:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      .last-step .content p {
+        font-size: var(--size-md);
+      }
+    }
+
+    .last-step button {
+      display: block;
+      margin: auto;
+      padding: 0.5rem 1rem;
       font-size: var(--size-lg);
-      line-height: 2rem;
+      color: var(--color-white);
+      background: var(--color-light-pink);
+      border: none;
+      border-radius: 5px;
+      transition: background-color var(--transition-normal);
+      cursor: pointer;
     }
 
-    .stage:nth-child(odd) p {
-      text-align: right;
+    .last-step button:hover {
+      background: var(--color-pink);
     }
-
-    .stage:nth-child(even) p {
-      text-align: left;
-    }
-  }
-</style>
+  </style>
+</section>

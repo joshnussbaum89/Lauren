@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Cooper Bold';
-  src: url('./fonts/CooperBT-Bold.woff2') format('woff2'),
-    url('./fonts/CooperBT-Bold.woff') format('woff');
+  src: url('/fonts/CooperBT-Bold.woff2') format('woff2'),
+    url('/fonts/CooperBT-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Cooper Light Italic';
-  src: url('./fonts/CooperBT-LightItalic.woff2') format('woff2'),
-    url('./fonts/CooperBT-LightItalic.woff') format('woff');
+  src: url('/fonts/CooperBT-LightItalic.woff2') format('woff2'),
+    url('/fonts/CooperBT-LightItalic.woff') format('woff');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Cooper Bold Italic';
-  src: url('./fonts/CooperBT-BoldItalic.woff2') format('woff2'),
-    url('./fonts/CooperBT-BoldItalic.woff') format('woff');
+  src: url('/fonts/CooperBT-BoldItalic.woff2') format('woff2'),
+    url('/fonts/CooperBT-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: 'Cooper Light';
-  src: url('./fonts/CooperBT-Light.woff2') format('woff2'),
-    url('./fonts/CooperBT-Light.woff') format('woff');
+  src: url('/fonts/CooperBT-Light.woff2') format('woff2'),
+    url('/fonts/CooperBT-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;

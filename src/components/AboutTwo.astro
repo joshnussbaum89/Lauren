@@ -1,8 +1,29 @@
+---
+import { Image } from 'astro:assets'
+import childhood from '../assets/1.png'
+import college from '../assets/2.png'
+import dissertation from '../assets/3.png'
+import masters from '../assets/4.png'
+import arrowMobileRight1 from '../assets/arrow-mobile-right-1.svg'
+import arrowDesktopLeft1 from '../assets/arrow-desktop-left-1.svg'
+import arrowMobileLeft2 from '../assets/arrow-mobile-left-2.svg'
+import arrowDesktopRight1 from '../assets/arrow-desktop-right-1.svg'
+import arrowMobileWiggle1 from '../assets/arrow-mobile-wiggle-1.svg'
+import arrowDesktopLeft2 from '../assets/arrow-desktop-left-2.svg'
+import arrowMobileWiggle2 from '../assets/arrow-mobile-wiggle-2.svg'
+import arrowDesktopRight2 from '../assets/arrow-desktop-right-2.svg'
+---
+
 <section id="about" class="about">
   <div class="step">
     <div class="title-card">
       <h3>Childhood</h3>
-      <img src="/1.png" alt="Lauren dancing during her childhood" />
+      <Image
+        src={childhood}
+        width={childhood.width}
+        height={childhood.height}
+        alt="Lauren dancing during her childhood"
+      />
     </div>
     <p>
       I began dancing at a young age and also became enamored with counting, organizing, and pattern
@@ -10,13 +31,28 @@
     </p>
   </div>
   <div class="arrows">
-    <img src="/arrow-mobile-right-1.svg" alt="Dashed arrow pointing to next step" />
-    <img src="/arrow-desktop-left-1.svg" alt="Dashed arrow pointing to next step" />
+    <Image
+      src={arrowMobileRight1}
+      width={arrowMobileRight1.width}
+      height={arrowMobileRight1.height}
+      alt="Dashed arrow pointing to next step"
+    />
+    <Image
+      src={arrowDesktopLeft1}
+      width={arrowDesktopLeft1.width}
+      height={arrowDesktopLeft1.height}
+      alt="Dashed arrow pointing to next step"
+    />
   </div>
   <div class="step">
     <div class="title-card">
       <h3>College</h3>
-      <img src="/2.png" alt="Lauren dancing during her college years" />
+      <Image
+        src={college}
+        width={college.width}
+        height={college.height}
+        alt="Lauren dancing during her college years"
+      />
     </div>
     <p>
       My love of dance and math brought me to NYC where I received my BFA in dance and BS in math
@@ -24,13 +60,28 @@
     </p>
   </div>
   <div class="arrows">
-    <img src="/arrow-mobile-left-2.svg" alt="Dashed arrow pointing to next step" />
-    <img src="/arrow-desktop-right-1.svg" alt="Dashed arrow pointing to next step" />
+    <Image
+      src={arrowMobileLeft2}
+      width={arrowMobileLeft2.width}
+      height={arrowMobileLeft2.height}
+      alt="Dashed arrow pointing to next step"
+    />
+    <Image
+      src={arrowDesktopRight1}
+      width={arrowDesktopRight1.width}
+      height={arrowDesktopRight1.height}
+      alt="Dashed arrow pointing to next step"
+    />
   </div>
   <div class="step">
     <div class="title-card">
       <h3>Dissertation Research</h3>
-      <img src="/3.png" alt="Lauren wearing a GoPro camera during her dissertation research" />
+      <Image
+        src={dissertation}
+        width={dissertation.width}
+        height={dissertation.height}
+        alt="Lauren wearing a GoPro camera during her dissertation research"
+      />
     </div>
     <p>
       I received my PhD in Learning Sciences from the Deparment of Teach & Learning in Peabody
@@ -39,13 +90,28 @@
     </p>
   </div>
   <div class="arrows">
-    <img src="/arrow-mobile-wiggle-1.svg" alt="Dashed arrow pointing to next step" />
-    <img src="/arrow-desktop-left-2.svg" alt="Dashed arrow pointing to next step" />
+    <Image
+      src={arrowMobileWiggle1}
+      width={arrowMobileWiggle1.width}
+      height={arrowMobileWiggle1.height}
+      alt="Dashed arrow pointing to next step"
+    />
+    <Image
+      src={arrowDesktopLeft2}
+      width={arrowDesktopLeft2.width}
+      height={arrowDesktopLeft2.height}
+      alt="Dashed arrow pointing to next step"
+    />
   </div>
   <div class="step">
     <div class="title-card">
       <h3>Masters</h3>
-      <img src="/4.png" alt="Lauren and her friend posing while pursing their masters degree" />
+      <Image
+        src={masters}
+        width={masters.width}
+        height={masters.height}
+        alt="Lauren and her friend posing while pursing their masters degree"
+      />
     </div>
     <p>
       I went on to work at MoMath where I worked as an educator and developed a movement based math
@@ -53,8 +119,18 @@
     </p>
   </div>
   <div class="arrows">
-    <img src="/arrow-mobile-wiggle-2.svg" alt="Dashed arrow pointing to next step" />
-    <img src="/arrow-desktop-right-2.svg" alt="Dashed arrow pointing to next step" />
+    <Image
+      src={arrowMobileWiggle2}
+      width={arrowMobileWiggle2.width}
+      height={arrowMobileWiggle2.height}
+      alt="Dashed arrow pointing to next step"
+    />
+    <Image
+      src={arrowDesktopRight2}
+      width={arrowDesktopRight2.width}
+      height={arrowDesktopRight2.height}
+      alt="Dashed arrow pointing to next step"
+    />
   </div>
   <div class="last-step">
     <div class="content">
@@ -73,6 +149,10 @@
   </div>
 
   <style>
+    img {
+      height: auto;
+    }
+
     .about {
       height: auto;
       display: flex;
@@ -85,6 +165,55 @@
     @media (min-width: 1024px) {
       .about {
         gap: 8vw;
+      }
+    }
+
+    .step {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1024px) {
+      .step {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8rem;
+        max-width: 1000px;
+      }
+
+      .step:nth-of-type(1),
+      .step:nth-of-type(5) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .step p {
+      font-size: var(--size-base);
+      text-align: center;
+      color: var(--color-black-faded);
+      padding: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .step p {
+        width: 50%;
+        font-size: var(--size-lg);
+        line-height: 2rem;
+        padding: 0;
+      }
+
+      .step:nth-of-type(1) p,
+      .step:nth-of-type(5) p {
+        text-align: right;
+      }
+
+      .step:nth-of-type(3) p,
+      .step:nth-of-type(7) p {
+        text-align: left;
       }
     }
 
@@ -115,29 +244,6 @@
 
     .arrows img {
       width: 100%;
-    }
-
-    .step {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    @media (min-width: 1024px) {
-      .step {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8rem;
-        max-width: 1000px;
-      }
-
-      .step:nth-of-type(1),
-      .step:nth-of-type(5) {
-        flex-direction: row-reverse;
-      }
     }
 
     .title-card {
@@ -193,32 +299,6 @@
     @media (min-width: 1024px) {
       .title-card img {
         width: 75%;
-      }
-    }
-
-    .step p {
-      font-size: var(--size-base);
-      text-align: center;
-      color: var(--color-black-faded);
-      padding: 2rem;
-    }
-
-    @media (min-width: 1024px) {
-      .step p {
-        width: 50%;
-        font-size: var(--size-lg);
-        line-height: 2rem;
-        padding: 0;
-      }
-
-      .step:nth-of-type(1) p,
-      .step:nth-of-type(5) p {
-        text-align: right;
-      }
-
-      .step:nth-of-type(3) p,
-      .step:nth-of-type(7) p {
-        text-align: left;
       }
     }
 

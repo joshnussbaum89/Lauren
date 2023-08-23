@@ -1,25 +1,33 @@
 ---
+import { getImage } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
-import SectionDivider from '../components/SectionDivider.astro'
 import Header from '../components/Header.astro'
-// import About from '../components/About.astro'
+import SectionDivider from '../components/SectionDivider.astro'
 import AboutTwo from '../components/AboutTwo.astro'
-import WhatIDo from '../components/WhatIDo.astro'
+import AreasOfResearch from '../components/AreasOfResearch.astro'
 import Footer from '../components/Footer.astro'
+
+import yellowFlowers from '../assets/yellow-flowers.jpg'
+import dancingGreen from '../assets/dancing-green.jpeg'
+
+const yellowFlowersImage = await getImage({ src: yellowFlowers })
+const dancingGreenImage = await getImage({ src: dancingGreen })
 ---
 
-<Layout title="Lauren Vogelstein">
+<Layout
+  title="Lauren Vogelstein"
+  description="Lauren Vogelstein is a postdoctoral associate at NYU in the department of Teaching & Learning. She designs and studies STEAM learning environments where the A in STEAM is as respected as the STEM disciplines involved."
+>
   <Header />
-  <SectionDivider title="About Me" imageUrl="/dancing-green.jpeg" isArrow={true} />
-  <!-- <About /> -->
+  <SectionDivider title="About Me" imageUrl={dancingGreenImage.src} isArrow={true} />
   <AboutTwo />
   <SectionDivider
     title="What I Do"
     theme="pink"
-    imageUrl="/yellow-flowers.jpg"
+    imageUrl={yellowFlowersImage.src}
     hasDescription={true}
   />
-  <WhatIDo />
-  <SectionDivider title="Research" imageUrl="/dancing-green.jpeg" />
+  <AreasOfResearch />
+  <SectionDivider title="Research" imageUrl={dancingGreenImage.src} />
   <Footer />
 </Layout>

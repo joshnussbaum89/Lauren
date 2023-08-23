@@ -1,25 +1,46 @@
 ---
+import { Image } from 'astro:assets'
 import Navigation from './Navigation.astro'
+import curvedName from '../assets/curved-name.svg'
+import laurenHeadshot from '../assets/lauren-headshot.png'
 ---
 
 <header>
   <Navigation />
   <div class="header-content">
     <div class="signature">
-      <img src="/curved-name.svg" alt="Curved name text" />
-      <img src="/lauren-headshot.png" alt="Lauren Vogelstein Headshot" />
+      <Image
+        src={curvedName}
+        width={curvedName.width}
+        height={curvedName.height}
+        alt="Curved name text"
+      />
+      <Image
+        src={laurenHeadshot}
+        width={laurenHeadshot.width}
+        height={laurenHeadshot.height}
+        alt="Lauren Vogelstein Headshot"
+      />
     </div>
     <div class="info">
-      <p>
-        I am a <span>postdoctoral associate</span> at NYU in the department of Teaching & Learning and
-        recieved my PhD in Learning & Design from Vanderbilt University.
-      </p>
-      <p>
-        My scholarship centers on widening the resources made available for <span
-          >learning and doing STEM</span
-        > in order to provide spaces where youth feel the expressiveness of their joint sensemaking is
-        valued and nurtured.
-      </p>
+      <div class="animated-titles">
+        <p data-index="1" class="active">Learning Scientist</p>
+        <p data-index="2">Dancer</p>
+        <p data-index="3">Collaborator</p>
+      </div>
+      <div class="description">
+        <p>
+          I design and study STEAM learning environments where the <span>A</span> in STE<span
+            >A</span
+          >M is as respected as the STEM disciplines involved. In particular, I explore how
+          collaborating with dancers and choreographers on the design and analysis of STEAM spaces
+          can leverage artistic, choreographic research as rigorous forms of collective learning.
+        </p>
+        <p>
+          Currently, I am a <span>postdoctoral associate</span> at NYU in the department of Teaching
+          & Learning. Before that, I received my PhD in Learning & Design from Vanderbilt University.
+        </p>
+      </div>
     </div>
   </div>
 </header>
@@ -29,13 +50,6 @@ import Navigation from './Navigation.astro'
     position: relative;
     background: var(--gradient-blue-purple);
   }
-
-  /* @media (min-width: 1024px) {
-    header {
-      clip-path: ellipse(100% 100% at 50% 0%);
-      margin-bottom: 8rem;
-    }
-  } */
 
   p {
     font-size: var(--size-lg);
@@ -61,6 +75,10 @@ import Navigation from './Navigation.astro'
     align-items: center;
   }
 
+  .signature img {
+    height: auto;
+  }
+
   .signature img:nth-child(1) {
     width: 100%;
     max-width: 650px;
@@ -82,7 +100,7 @@ import Navigation from './Navigation.astro'
 
   @media (min-width: 1024px) {
     .info {
-      margin-bottom: 10rem;
+      margin-bottom: 8rem;
       padding: 1rem;
       text-align: left;
       color: var(--color-white);
@@ -90,27 +108,100 @@ import Navigation from './Navigation.astro'
     }
   }
 
-  .info p {
+  .animated-titles {
+    position: relative;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .animated-titles {
+      margin-bottom: 0;
+    }
+  }
+
+  .animated-titles > p {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 350px;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0.5rem 1rem;
+    font-size: var(--size-md);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-black);
+    border-radius: 0.5rem.step p {
+      font-size: var(--size-base);
+      text-align: center;
+      color: var(--color-black-faded);
+      padding: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .step p {
+        width: 50%;
+        font-size: var(--size-lg);
+        line-height: 2rem;
+        padding: 0;
+      }
+
+      .step:nth-of-type(1) p,
+      .step:nth-of-type(5) p {
+        text-align: right;
+      }
+
+      .step:nth-of-type(3) p,
+      .step:nth-of-type(7) p {
+        text-align: left;
+      }
+    };
+    transition: var(--transition-long);
+  }
+
+  @media (min-width: 1024px) {
+    .animated-titles > p {
+      left: 0;
+      transform: none;
+      width: auto;
+    }
+  }
+
+  .animated-titles > p.active {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 1024px) {
+    .animated-titles > p.active {
+      transform: translate(0, -50%);
+    }
+  }
+
+  .animated-titles p[data-index='1'] {
+    background-color: pink;
+  }
+
+  .animated-titles p[data-index='2'] {
+    background-color: lightblue;
+  }
+
+  .animated-titles p[data-index='3'] {
+    background-color: greenyellow;
+  }
+
+  .description {
     max-width: 500px;
     margin: 0 auto;
   }
 
-  .info p:not(:last-of-type) {
+  .description p:not(:last-of-type) {
     margin-bottom: 2rem;
-  }
-
-  .info p:nth-of-type(1) span {
-    color: var(--color-light-green);
-  }
-
-  @media (min-width: 1024px) {
-    .info p:nth-of-type(1) span {
-      color: var(--color-extra-light-green);
-    }
-  }
-
-  .info p:nth-of-type(2) span {
-    color: var(--color-light-pink);
   }
 
   @keyframes fadeIn {
@@ -124,3 +215,26 @@ import Navigation from './Navigation.astro'
     }
   }
 </style>
+
+<script>
+  const animatedTitles = document.querySelector('.animated-titles')
+  const titles = animatedTitles?.querySelectorAll('.animated-titles p') as NodeListOf<HTMLElement>
+  let index = 0
+
+  function animateTitles() {
+    titles[index].classList.add('active')
+
+    setInterval(() => {
+      titles[index].classList.remove('active')
+
+      if (index === titles.length - 1) {
+        index = 0
+      } else {
+        index++
+      }
+
+      titles[index].classList.add('active')
+    }, 3000)
+  }
+  animateTitles()
+</script>

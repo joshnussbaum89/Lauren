@@ -44,6 +44,7 @@
   --color-black-faded: #2e3438;
   --color-grey: #f5f5f5;
   --color-white: #fff;
+  --color-white-transparent: #ffffff50;
   --color-green: #283700;
   --color-light-green: #597600;
   --color-extra-light-green: #e3e9d2;
@@ -52,6 +53,7 @@
   --color-light-pink: #ff5c97;
   --color-light-pink-transparent: #ff5c9850;
   --color-purple: #848dad;
+  --color-light-purple: #b8c2d7;
   --color-purple-transparent: #848dad50;
   --color-box-shadow: #0000001a;
   --color-blue: #5b7eae;
@@ -72,15 +74,24 @@
   --transition-natural: cubic-bezier(0.34, -0.26, 0.28, 1.25);
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: var(--font-cooper-light);
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Experimental, but fallback is default styling */
+  text-wrap: balance;
 }
 
 body[data-overlay-displayed='true'] {

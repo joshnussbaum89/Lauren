@@ -1,0 +1,201 @@
+---
+import TitleCard from './layout/TitleCard.astro'
+import childhoodImage from '../assets/1.png'
+import collegeImage from '../assets/2.png'
+import teachingImage from '../assets/3.png'
+import graduateSchoolImage from '../assets/graduate-school.png'
+import currentlyImage from '../assets/currently.png'
+---
+
+<section id="about" class="about">
+  <div class="categories">
+    <span class="active" data-category="childhood">Childhood</span>
+    <span data-category="college">College</span>
+    <span data-category="teaching">Teaching</span>
+    <span data-category="graduate-school">Graduate School</span>
+    <span data-category="currently">Currently</span>
+  </div>
+
+  <div class="post active" data-category="childhood">
+    <TitleCard title="Childhood" image={childhoodImage} theme="gradient" alt="Childhood" />
+    <p>
+      I began dancing at a young age and also became enamored with counting and pattern making as
+      well. I always felt challenged and compelled by questions I explored in dance and STEM spaces
+      separately and was encouraged to pursue dance as a hobby and STEM as a career.
+    </p>
+  </div>
+  <div class="post" data-category="college">
+    <TitleCard
+      title="College"
+      image={collegeImage}
+      theme="gradient"
+      alt="Lauren dancing during her college years"
+    />
+    <p>
+      My love of dance and math brought me to NYU where I received my BFA in dance and BS in
+      mathematics from the Ailey School & Fordham University. For my senior choreographic thesis, I
+      explored dance as a <a href="/">form of relational research</a> and <a href="/"
+        >mathematical research</a
+      >. This intensive dance environment allowed me to begin to see dance making as a form of
+      research in its own right that could also be generative to other disciplines.
+    </p>
+  </div>
+  <div class="post" data-category="teaching">
+    <TitleCard
+      title="Teaching"
+      image={teachingImage}
+      theme="gradient"
+      alt="Lauren wearing a GoPro camera during her dissertation research"
+    />
+    <p>
+      After college I worked as an educator on the floor of the National Museum of Mathematics
+      (MoMath) in NYC where I first developed activities bringing math and dance together. I also
+      worked as a math and science teacher at a private school where my constant wonderings about
+      how to engage students' full bodies and selves in their learning led me to apply to graduate
+      school.
+    </p>
+  </div>
+  <div class="post" data-category="graduate-school">
+    <TitleCard
+      title="Graduate School"
+      image={graduateSchoolImage}
+      theme="gradient"
+      alt="Lauren and her professors at Northwestern University"
+    />
+    <p>
+      I received an MA in Learning Sciences from Northwestern University where I began to develop my
+      identity as a learning scientist. I continued my inquiry about dance and STEM learning at
+      Vanderbilt University where I earned my PhD in Learning & Design under the mentorship of Drs.
+      Rogers Hall & Corey Brady. <a
+        href="https://www.proquest.com/docview/2737513077?pq-origsite=gscholar&fromopenview=true"
+        target="_blank"
+        >My dissertation research focused on choreographic ways of knowing as sites for STEM
+        learning, design, and analysis</a
+      >.
+    </p>
+  </div>
+
+  <div class="post" data-category="currently">
+    <TitleCard
+      title="Currently"
+      image={currentlyImage}
+      theme="gradient"
+      alt="Lauren and her postdoctoral fellows at NYU"
+    />
+    <p>
+      I am now a postdoctoral associate at NYU working on the PiLa-CS project to support teachers to
+      incorporate CS with a translanguaging lens into their classrooms. In this position, I am a
+      Lucas Education Foundation postdoctoral fellow, focusing on the study and design of equity
+      oriented learning environments. This work has helped me think about syncretism as a
+      theoretical approach that resists knowledge hierarchies when putting academic (or STEM) and
+      non-academic (or artistic) ways of knowing in conversation with each other.
+    </p>
+    <p>
+      In addition to my postdoctoral work, I am a co-PI on the three-year NSF AISL project
+      Choreographing Science <a
+        href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2115773&HistoricalAwards=false"
+        target="_blank">(Award #2115773)</a
+      >. This project extends my previous work into scientific modeling as we are working to bring
+      scientists, middle schoolers, and choreographers together to use choreographic and
+      computational modeling tools to study emergent phenomena from partner scientists' own active
+      lines of research outline the four of us and the poster in between.
+    </p>
+  </div>
+  <button>View CV</button>
+</section>
+
+<style>
+  .about {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .categories {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 6rem;
+  }
+
+  @media (min-width: 1024px) {
+    .categories {
+      justify-content: space-between;
+    }
+  }
+
+  .categories span {
+    padding: 0.5rem 1rem;
+    font-size: var(--size-base);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    color: var(--color-black);
+    background-color: var(--color-grey);
+    transition: color var(--transition-normal), background-color var(--transition-normal);
+    cursor: pointer;
+  }
+
+  .categories span.active {
+    color: var(--color-white);
+    background-color: var(--color-light-pink);
+  }
+
+  .post {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity var(--transition-long);
+  }
+
+  .post.active {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+
+  .post p {
+    margin-bottom: 2rem;
+    font-size: var(--size-md);
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: var(--size-lg);
+    color: var(--color-white);
+    background: var(--color-light-pink);
+    border: none;
+    border-radius: 3rem;
+    transition: background-color var(--transition-normal);
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: var(--color-pink);
+  }
+</style>
+
+<script>
+  // Hide/show posts based on category
+  const categories = document.querySelectorAll('.categories span')
+  const posts = document.querySelectorAll('.post')
+
+  categories.forEach((category) => {
+    category.addEventListener('click', function (this: HTMLElement) {
+      const categoryName = this.getAttribute('data-category')
+      const activePost = document.querySelector(`.post[data-category="${categoryName}"]`)
+
+      categories.forEach((category) => category.classList.remove('active'))
+      posts.forEach((post) => post.classList.remove('active'))
+
+      this.classList.add('active')
+      activePost?.classList.add('active')
+    })
+  })
+</script>

@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets'
+
+export interface Props {
+  title: string
+  theme?: 'green' | 'pink' | 'blue' | 'purple' | 'gradient'
+  image: any
+  alt: string
+}
+
+const { title, theme, image, alt } = Astro.props
+---
+
+<div
+  class:list={[
+    'card',
+    {
+      green: theme === 'green' || !theme,
+      pink: theme === 'pink',
+      blue: theme === 'blue',
+      purple: theme === 'purple',
+      gradient: theme === 'gradient',
+    },
+  ]}
+>
+  <h3>{title}</h3>
+  <Image src={image} width={image.width} height={image.height} alt={alt} />
+</div>
+
+<style>
+  img {
+    height: auto;
+  }
+
+  .card {
+    position: relative;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: clamp(200px, 50vw, 275px);
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 8px var(--color-box-shadow);
+  }
+
+  .green {
+    background-color: var(--color-extra-light-green);
+  }
+  .pink {
+    background-color: var(--color-light-pink-transparent);
+  }
+  .blue {
+    background-color: var(--color-blue);
+  }
+  .purple {
+    background-color: var(--color-purple-transparent);
+  }
+  .gradient {
+    background: var(--gradient-blue-purple);
+  }
+
+  .card h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: var(--size-xl);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 var(--color-black-faded);
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  @media (min-width: 1024px) {
+    .card h3 {
+      font-size: var(--size-xxl);
+    }
+  }
+
+  .card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 275px;
+  }
+</style>

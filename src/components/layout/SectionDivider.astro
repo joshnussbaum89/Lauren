@@ -4,10 +4,10 @@ export interface Props {
   theme?: 'green' | 'pink' | 'blue' | 'purple'
   imageUrl: string
   isArrow?: boolean
-  hasDescription?: boolean
+  description?: string
 }
 
-const { title, theme, imageUrl, isArrow, hasDescription } = Astro.props
+const { title, theme, imageUrl, isArrow, description } = Astro.props
 ---
 
 <div
@@ -24,15 +24,7 @@ const { title, theme, imageUrl, isArrow, hasDescription } = Astro.props
   style={`background-image: url(${imageUrl});`}
 >
   <h2>{title}</h2>
-  {
-    hasDescription && (
-      <p>
-        I work to widen the resources made available for learning and doing STEM in order to provide
-        spaces where youth feel the expressiveness of their joint sense-making is valued and
-        nurtured.
-      </p>
-    )
-  }
+  {description && <p>{description}</p>}
 </div>
 
 <style>

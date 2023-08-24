@@ -1,13 +1,14 @@
 ---
 import { Image } from 'astro:assets'
-import Navigation from './Navigation.astro'
+import Navigation from './layout/Navigation.astro'
 import curvedName from '../assets/curved-name.svg'
 import laurenHeadshot from '../assets/lauren-headshot.png'
+import RotatingTitles from './animations/RotatingTitles.astro'
 ---
 
 <header>
   <Navigation />
-  <div class="header-content">
+  <div class="content">
     <div class="signature">
       <Image
         src={curvedName}
@@ -23,11 +24,7 @@ import laurenHeadshot from '../assets/lauren-headshot.png'
       />
     </div>
     <div class="info">
-      <div class="animated-titles">
-        <p data-index="1" class="active">Learning Scientist</p>
-        <p data-index="2">Dancer</p>
-        <p data-index="3">Collaborator</p>
-      </div>
+      <RotatingTitles />
       <div class="description">
         <p>
           I design and study STEAM learning environments where the <span>A</span> in STE<span
@@ -56,12 +53,12 @@ import laurenHeadshot from '../assets/lauren-headshot.png'
     line-height: 2rem;
   }
 
-  .header-content {
+  .content {
     animation: var(--transition-long) 0s 1 fadeIn;
   }
 
   @media (min-width: 1024px) {
-    .header-content {
+    .content {
       display: flex;
       justify-content: space-evenly;
     }
@@ -108,69 +105,6 @@ import laurenHeadshot from '../assets/lauren-headshot.png'
     }
   }
 
-  .animated-titles {
-    position: relative;
-    height: 80px;
-    margin-bottom: 1rem;
-  }
-
-  @media (min-width: 1024px) {
-    .animated-titles {
-      margin-bottom: 0;
-    }
-  }
-
-  .animated-titles > p {
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 350px;
-    opacity: 0;
-    visibility: hidden;
-    padding: 0.5rem 1rem;
-    font-size: var(--size-md);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-black);
-    border-radius: 0.5rem;
-    transition: var(--transition-long);
-  }
-
-  @media (min-width: 1024px) {
-    .animated-titles > p {
-      left: 0;
-      transform: none;
-      width: auto;
-    }
-  }
-
-  .animated-titles > p.active {
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  @media (min-width: 1024px) {
-    .animated-titles > p.active {
-      transform: translate(0, -50%);
-    }
-  }
-
-  .animated-titles p[data-index='1'] {
-    background-color: pink;
-  }
-
-  .animated-titles p[data-index='2'] {
-    background-color: lightblue;
-  }
-
-  .animated-titles p[data-index='3'] {
-    background-color: greenyellow;
-  }
-
   .description {
     max-width: 500px;
     margin: 0 auto;
@@ -191,26 +125,3 @@ import laurenHeadshot from '../assets/lauren-headshot.png'
     }
   }
 </style>
-
-<script>
-  const animatedTitles = document.querySelector('.animated-titles')
-  const titles = animatedTitles?.querySelectorAll('.animated-titles p') as NodeListOf<HTMLElement>
-  let index = 0
-
-  function animateTitles() {
-    titles[index].classList.add('active')
-
-    setInterval(() => {
-      titles[index].classList.remove('active')
-
-      if (index === titles.length - 1) {
-        index = 0
-      } else {
-        index++
-      }
-
-      titles[index].classList.add('active')
-    }, 3000)
-  }
-  animateTitles()
-</script>

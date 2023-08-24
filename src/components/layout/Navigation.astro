@@ -97,6 +97,13 @@
     padding: 1rem;
     background-color: var(--color-white);
     box-shadow: 0 0 8px var(--color-box-shadow);
+    transition: var(--transition-long);
+  }
+
+  nav.scrolled {
+    background-color: var(--color-white-transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
   }
 
   .wrapper {
@@ -293,6 +300,7 @@
 
 <script>
   const body = document.querySelector('body')
+  const navigation = document.querySelector('nav')
   const hamburger = document.getElementById('hamburger')
   const mobileNavItems = document.querySelectorAll('.mobile-nav-overlay li')
   let overlayDisplayed = false
@@ -311,7 +319,16 @@
     }
   }
 
-  hamburger?.addEventListener('click', handleMobileNavigationOnClick)
+  function handleNavigationOnScroll() {
+    if (window.scrollY > 0) {
+      navigation?.classList.add('scrolled')
+    } else {
+      navigation?.classList.remove('scrolled')
+    }
+  }
+
+  window.addEventListener('scroll', handleNavigationOnScroll)
   window.addEventListener('resize', handleMobileNavigationOnResize)
+  hamburger?.addEventListener('click', handleMobileNavigationOnClick)
   mobileNavItems.forEach((item) => item.addEventListener('click', handleMobileNavigationOnClick))
 </script>

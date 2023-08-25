@@ -130,6 +130,16 @@ p {
   line-height: 1.5rem;
 }
 
+a {
+  text-underline-offset: 0.1rem;
+  color: var(--color-black-faded);
+  transition: var(--transition-normal);
+}
+
+a:hover {
+  color: var(--color-light-pink);
+}
+
 ul {
   list-style: none;
 }

@@ -55,19 +55,25 @@
   --color-purple: #848dad;
   --color-light-purple: #b8c2d7;
   --color-purple-transparent: #848dad50;
-  --color-box-shadow: #0000001a;
   --color-blue: #5b7eae;
+  --color-box-shadow: #0000001a;
 
   --gradient-blue-purple: linear-gradient(-45deg, var(--color-blue) 25%, var(--color-purple));
 
-  --size-sm: 0.875rem; /* line-height: var(--size-md) */
-  --size-base: 1rem; /* line-height: 1.5rem */
-  --size-md: 1.25rem; /* line-height: 1.75rem */
-  --size-lg: 1.5rem; /* line-height: 2rem */
-  --size-xl: 2.25rem; /* line-height: 2.5rem */
+  /* line-height: var(--size-md) */
+  --size-sm: 0.875rem;
+  /* line-height: 1.5rem */
+  --size-base: 1rem;
+  /* line-height: 1.75rem */
+  --size-md: 1.25rem;
+  /* line-height: 2rem */
+  --size-lg: 1.5rem;
+  /* line-height: 2.5rem */
+  --size-xl: 2.25rem;
   --size-xxl: 3rem;
-  --size-xxxl: 3.75rem;
+  --size-xxxl: 4rem;
   --size-section-header: clamp(2rem, 5vw, 4rem);
+  --size-subsection-header: clamp(1.5rem, 5vw, 3rem);
 
   --transition-normal: 0.25s ease-in-out;
   --transition-long: 1s ease-in-out;
@@ -108,14 +114,30 @@ h5 {
 }
 
 h1 {
-  font-size: var(--size-xl);
+  font-size: var(--size-xxl);
   line-height: 2.5rem;
 }
 
 h2 {
   margin-bottom: 2rem;
-  font-size: var(--size-section-header);
+  font-size: var(--size-xxl);
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: var(--size-xxxl);
+  }
+}
+
+h3 {
+  font-size: var(--size-xl);
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: var(--size-xxl);
+  }
 }
 
 ul,

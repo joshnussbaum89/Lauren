@@ -1,22 +1,22 @@
 ---
-import ImageCard from './layout/ImageCard.astro'
-import childhoodImage from '../assets/1.png'
-import collegeImage from '../assets/2.png'
-import teachingImage from '../assets/3.png'
-import graduateSchoolImage from '../assets/graduate-school.png'
-import currentlyImage from '../assets/currently.png'
+import ImageCard from '../layout/ImageCard.astro'
+import childhoodImage from '../../assets/1.png'
+import collegeImage from '../../assets/2.png'
+import teachingImage from '../../assets/3.png'
+import graduateSchoolImage from '../../assets/graduate-school.png'
+import currentlyImage from '../../assets/currently.png'
 ---
 
-<section id="about" class="about">
+<section id="about" class="about site-section">
   <div class="categories">
-    <span class="active" data-category="childhood">Childhood</span>
+    <span data-category="childhood">Childhood</span>
     <span data-category="college">College</span>
     <span data-category="teaching">Teaching</span>
     <span data-category="graduate-school">Graduate School</span>
-    <span data-category="currently">Currently</span>
+    <span class="active" data-category="currently">Currently</span>
   </div>
 
-  <div class="post active" data-category="childhood">
+  <div class="post" data-category="childhood">
     <ImageCard title="Childhood" image={childhoodImage} theme="gradient" alt="Childhood" />
     <p>
       I began dancing at a young age and also became enamored with counting and pattern making as
@@ -75,7 +75,7 @@ import currentlyImage from '../assets/currently.png'
     </p>
   </div>
 
-  <div class="post" data-category="currently">
+  <div class="post active" data-category="currently">
     <ImageCard
       title="Currently"
       image={currentlyImage}
@@ -135,7 +135,9 @@ import currentlyImage from '../assets/currently.png'
     border-radius: 0.5rem;
     color: var(--color-black);
     background-color: var(--color-grey);
-    transition: color var(--transition-normal), background-color var(--transition-normal);
+    transition:
+      color var(--transition-medium),
+      background-color var(--transition-medium);
     cursor: pointer;
   }
 
@@ -148,7 +150,7 @@ import currentlyImage from '../assets/currently.png'
     visibility: hidden;
     height: 0;
     opacity: 0;
-    transition: opacity var(--transition-long);
+    transition: opacity var(--transition-medium);
   }
 
   .post.active {
@@ -173,7 +175,7 @@ import currentlyImage from '../assets/currently.png'
     background: var(--color-light-pink);
     border: none;
     border-radius: 3rem;
-    transition: background-color var(--transition-normal);
+    transition: background-color var(--transition-medium);
     cursor: pointer;
   }
 
@@ -183,19 +185,18 @@ import currentlyImage from '../assets/currently.png'
 </style>
 
 <script>
-  // Hide/show posts based on category
   const categories = document.querySelectorAll('.categories span')
   const posts = document.querySelectorAll('.post')
 
   categories.forEach((category) => {
-    category.addEventListener('click', function (this: HTMLElement) {
-      const categoryName = this.getAttribute('data-category')
+    category.addEventListener('click', () => {
+      const categoryName = category.getAttribute('data-category')
       const activePost = document.querySelector(`.post[data-category="${categoryName}"]`)
 
       categories.forEach((category) => category.classList.remove('active'))
       posts.forEach((post) => post.classList.remove('active'))
 
-      this.classList.add('active')
+      category.classList.add('active')
       activePost?.classList.add('active')
     })
   })

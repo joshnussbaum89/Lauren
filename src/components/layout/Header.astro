@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets'
-import Navigation from './layout/Navigation.astro'
-import curvedName from '../assets/curved-name.svg'
-import laurenHeadshot from '../assets/lauren-headshot.png'
-import RotatingTitles from './animations/RotatingTitles.astro'
+import Navigation from './Navigation.astro'
+import curvedName from '../../assets/curved-name.svg'
+import laurenHeadshot from '../../assets/lauren-headshot.png'
+import RotatingTitles from '../animations/RotatingTitles.astro'
 ---
 
 <header>
@@ -54,7 +54,12 @@ import RotatingTitles from './animations/RotatingTitles.astro'
   }
 
   .content {
-    animation: var(--transition-long) 0s 1 fadeIn;
+    opacity: 0;
+    transition: opacity var(--transition-long);
+  }
+
+  .content.active {
+    opacity: 1;
   }
 
   @media (min-width: 1024px) {
@@ -113,15 +118,13 @@ import RotatingTitles from './animations/RotatingTitles.astro'
   .description p:not(:last-of-type) {
     margin-bottom: 2rem;
   }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      visibility: none;
-    }
-    to {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
 </style>
+
+<script>
+  function handleFadeInOnLoad() {
+    const content = document.querySelector('.content')
+    content?.classList.add('active')
+  }
+
+  window.addEventListener('load', handleFadeInOnLoad)
+</script>

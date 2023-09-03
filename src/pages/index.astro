@@ -1,12 +1,14 @@
 ---
 import { getImage } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro'
+import Header from '../components/layout/Header.astro'
 import SectionDivider from '../components/layout/SectionDivider.astro'
-import AboutThree from '../components/AboutThree.astro'
-import AreasOfResearch from '../components/AreasOfResearch.astro'
+import About from '../components/sections/About.astro'
+import Research from '../components/sections/Research.astro'
+import Teaching from '../components/sections/Teaching.astro'
+import Commitments from '../components/sections/Commitments.astro'
+import Choreography from '../components/sections/Choreography.astro'
 import Footer from '../components/layout/Footer.astro'
-
 import yellowFlowers from '../assets/yellow-flowers.jpg'
 import dancingGreen from '../assets/dancing-green.jpeg'
 
@@ -20,17 +22,54 @@ const dancingGreenImage = await getImage({ src: dancingGreen })
 >
   <Header />
   <SectionDivider title="About" imageUrl={dancingGreenImage.src} isArrow={true} />
-  <AboutThree />
+  <About />
   <SectionDivider
     title="Research"
     imageUrl={yellowFlowersImage.src}
     description={`I work to widen the resources made available for learning and doing STEM in order to provide
       spaces where youth feel the expressiveness of their joint sense-making is valued and
       nurtured.`}
+    isArrow={true}
   />
-  <AreasOfResearch />
-  <SectionDivider title="Teaching" imageUrl={dancingGreenImage.src} />
-  <SectionDivider title="Commitments" imageUrl={dancingGreenImage.src} />
-  <SectionDivider title="Choreography" imageUrl={dancingGreenImage.src} />
+  <Research />
+  <SectionDivider
+    title="Teaching"
+    imageUrl={dancingGreenImage.src}
+    description={`Continually working through what it means for learning to occur through shifts in participation in communities of practice.`}
+    isArrow={true}
+  />
+  <Teaching />
+  <SectionDivider title="Commitments" imageUrl={dancingGreenImage.src} isArrow={true} />
+  <Commitments />
+  <SectionDivider title="Choreography" imageUrl={dancingGreenImage.src} isArrow={true} />
+  <Choreography />
   <Footer />
 </Layout>
+
+<script>
+  function handleActiveSiteSectionsOnScroll() {
+    if (!window.IntersectionObserver) return console.log('IntersectionObserver not supported')
+
+    // Grab sections
+    const sections = document.querySelectorAll('.site-section') as NodeListOf<HTMLElement>
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = entry.target as HTMLElement
+          section.classList.add('active')
+        }
+      })
+    }, options)
+
+    sections.forEach((section) => observer.observe(section))
+  }
+
+  document.addEventListener('scroll', handleActiveSiteSectionsOnScroll)
+</script>

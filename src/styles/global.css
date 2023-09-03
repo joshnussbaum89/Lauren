@@ -76,6 +76,7 @@
   --size-subsection-header: clamp(1.5rem, 5vw, 3rem);
 
   --transition-normal: 0.25s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
   --transition-long: 1s ease-in-out;
   --transition-natural: cubic-bezier(0.34, -0.26, 0.28, 1.25);
 }
@@ -170,7 +171,17 @@ button {
   font-family: var(--font-cooper-bold);
 }
 
-#about,
-#research {
+.site-section {
   padding: 10rem 1rem;
+  opacity: 0;
+  transition: opacity var(--transition-long);
+}
+
+.site-section.active {
+  opacity: 1;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: auto;
 }

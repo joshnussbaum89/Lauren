@@ -9,11 +9,17 @@ import Teaching from '../components/sections/Teaching.astro'
 import Commitments from '../components/sections/Commitments.astro'
 import Choreography from '../components/sections/Choreography.astro'
 import Footer from '../components/layout/Footer.astro'
-import yellowFlowers from '../assets/yellow-flowers.jpg'
-import dancingGreen from '../assets/dancing-green.jpeg'
+import dividerOne from '../assets/divider-1.png'
+import dividerTwo from '../assets/divider-2.jpg'
+import dividerThree from '../assets/divider-3.png'
+import dividerFour from '../assets/divider-4.png'
+import divderFive from '../assets/divider-5.png'
 
-const yellowFlowersImage = await getImage({ src: yellowFlowers })
-const dancingGreenImage = await getImage({ src: dancingGreen })
+const dividerOneImage = await getImage({ src: dividerOne })
+const dividerTwoImage = await getImage({ src: dividerTwo })
+const dividerThreeImage = await getImage({ src: dividerThree })
+const dividerFourImage = await getImage({ src: dividerFour })
+const dividerFiveImage = await getImage({ src: divderFive })
 ---
 
 <Layout
@@ -21,11 +27,11 @@ const dancingGreenImage = await getImage({ src: dancingGreen })
   description="Lauren Vogelstein is a postdoctoral associate at NYU in the department of Teaching & Learning. She designs and studies STEAM learning environments where the A in STEAM is as respected as the STEM disciplines involved."
 >
   <Header />
-  <SectionDivider title="About" imageUrl={dancingGreenImage.src} isArrow={true} />
+  <SectionDivider title="About" imageUrl={dividerOneImage.src} isArrow={true} />
   <About />
   <SectionDivider
     title="Research"
-    imageUrl={yellowFlowersImage.src}
+    imageUrl={dividerTwoImage.src}
     description={`I work to widen the resources made available for learning and doing STEM in order to provide
       spaces where youth feel the expressiveness of their joint sense-making is valued and
       nurtured.`}
@@ -34,14 +40,14 @@ const dancingGreenImage = await getImage({ src: dancingGreen })
   <Research />
   <SectionDivider
     title="Teaching"
-    imageUrl={dancingGreenImage.src}
+    imageUrl={dividerThreeImage.src}
     description={`Continually working through what it means for learning to occur through shifts in participation in communities of practice.`}
     isArrow={true}
   />
   <Teaching />
-  <SectionDivider title="Commitments" imageUrl={dancingGreenImage.src} isArrow={true} />
+  <SectionDivider title="Commitments" imageUrl={dividerFourImage.src} isArrow={true} />
   <Commitments />
-  <SectionDivider title="Choreography" imageUrl={dancingGreenImage.src} isArrow={true} />
+  <SectionDivider title="Choreography" imageUrl={dividerFiveImage.src} isArrow={true} />
   <Choreography />
   <Footer />
 </Layout>

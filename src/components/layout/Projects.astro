@@ -1,7 +1,12 @@
 ---
-// TODO: Crop images and add image for each project
 import TitleCard from './ImageCard.astro'
 import choreographingScience from '../../assets/choreographing-science.png'
+import pilaCs from '../../assets/pila-cs.png'
+import physicalResearch from '../../assets/physical-research.png'
+import reenactingEnsembleChoreography from '../../assets/reenacting-ensemble-choreography.jpg'
+import camps from '../../assets/camps.png'
+import youthAsMixedReality from '../../assets/youth-as-mixed-reality.jpg'
+import steamMaker from '../../assets/steam-maker.png'
 ---
 
 <div class="projects">
@@ -14,7 +19,7 @@ import choreographingScience from '../../assets/choreographing-science.png'
 
   <div class="project-container">
     <div class="project active" data-type="current">
-      <TitleCard image={choreographingScience} theme="gradient" alt="Childhood" />
+      <TitleCard image={choreographingScience} theme="gradient" alt="Choreographing Science" />
       <h4>
         <a
           href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2115773&HistoricalAwards=false"
@@ -41,6 +46,7 @@ import choreographingScience from '../../assets/choreographing-science.png'
       </p>
     </div>
     <div class="project active" data-type="current">
+      <TitleCard image={pilaCs} theme="gradient" alt="PiLa-CS" />
       <h4>
         <a href="https://www.pila-cs.org/" target="_blank" rel="noopener noreferrer">PiLa-CS</a>
       </h4>
@@ -73,7 +79,8 @@ import choreographingScience from '../../assets/choreographing-science.png'
       </p>
     </div>
     <div class="project active" data-type="previous">
-      <h4>Physical Research</h4>
+      <TitleCard image={physicalResearch} theme="gradient" alt="Physical Research" />
+      <h4>Professional Dancers' Practices of Physical Research</h4>
       <p>
         <a
           href="https://repository.isls.org/bitstream/1/7480/1/299-306.pdf"
@@ -98,7 +105,43 @@ import choreographingScience from '../../assets/choreographing-science.png'
         </a>
       </p>
     </div>
+
     <div class="project active" data-type="previous">
+      <TitleCard
+        image={reenactingEnsembleChoreography}
+        theme="gradient"
+        alt="Reenacting Ensemble Choreography"
+      />
+      <h4>Ensemble Choreographic Reenactment as Mathematical Activity</h4>
+      <p>Description of project goes here</p>
+      <p>
+        <a
+          href="https://link.springer.com/article/10.1007/s11858-019-01030-2"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><strong>Vogelstein, L., Brady, C., & Hall, R. (2019).</strong>
+          <br /> Reenacting mathematical concepts found in large-scale dance performance can provide
+          both material and method for ensemble learning. ZDM, 51, 331-346.
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://dl.acm.org/doi/pdf/10.1145/3078072.3084328?casa_token=S1ssgbGOtw8AAAAA:TIN3W3rprmgc-OrTakZxmGo_d0U5LmRqcun58VuPubIhcXp9o8py57AV26TvhrZam_Oxexj_LQbOsA"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><strong>Vogelstein, L., Brady, C., & Hall, R. (2017, June).</strong>
+          <br /> Mathematical reflections: The design potential of ensemble performance. In
+          Proceedings of the 2017 Conference on Interaction Design and Children (pp. 583-588).</a
+        >
+      </p>
+    </div>
+
+    <div class="project active" data-type="previous">
+      <TitleCard
+        image={camps}
+        theme="gradient"
+        alt="Computational And Mathematical Play Spaces (CAMPS)"
+      />
       <h4>Computational And Mathematical Play Spaces (CAMPS)</h4>
       <p>(Graduate Student Research Assistant)</p>
       <p>
@@ -140,6 +183,11 @@ import choreographingScience from '../../assets/choreographing-science.png'
       </p>
     </div>
     <div class="project active" data-type="previous">
+      <TitleCard
+        image={youthAsMixedReality}
+        theme="gradient"
+        alt="Youth as Mixed Reality Designers as part of the GEM STEP Project"
+      />
       <h4>
         Youth as Mixed Reality Designers as part of the <a
           href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1908791"
@@ -165,7 +213,14 @@ import choreographingScience from '../../assets/choreographing-science.png'
           Sciences.</a
         >
       </p>
-      <p>STEAM Maker Pedagogies (Graduate Student Research Assistant)</p>
+    </div>
+    <div class="project active" data-type="previous">
+      <TitleCard
+        image={steamMaker}
+        theme="gradient"
+        alt="STEAM Maker Pedagogies (Graduate Student Research Assistant)"
+      />
+      <h4>STEAM Maker Pedagogies (Graduate Student Research Assistant)</h4>
       <p>
         <a
           href="https://www.tandfonline.com/doi/pdf/10.1080/10508406.2022.2114833?casa_token=ZO6r3CjY2yIAAAAA:miTGU86XiksxdU53PzG7P2t9_ERyjt-jwEpXPNyCKbRpFl-j8wUHILZvBd03RZXJFLpfVO5AenPupw"
@@ -190,11 +245,11 @@ import choreographingScience from '../../assets/choreographing-science.png'
     }
 
     .projects h3 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     .tab-container {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     .tab {
@@ -250,11 +305,13 @@ import choreographingScience from '../../assets/choreographing-science.png'
 
     .project:hover h4,
     .project:hover p,
-    .project:hover a {
+    .project:hover a,
+    .project:hover h4 a {
       color: var(--color-white);
     }
 
-    .project:hover a:hover {
+    .project:hover a:hover,
+    .project:hover h4 a:hover {
       color: var(--color-light-pink);
     }
 

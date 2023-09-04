@@ -1,1 +1,120 @@
-<section id="choreography" class="choreography site-section"></section>
+<section id="choreography" class="choreography site-section">
+  <div class="project">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/K2VHhsndGBs?si=aJsBMUlHuuT0gZ--"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <h3>I think I heard you say that once. (2013)</h3>
+    <p>
+      This process explored two things: (1) how to bring the comfort in moving together in the
+      studio onto a stage with an audience and (2) how to weave episodic like attributes like the
+      structure of a television program
+    </p>
+  </div>
+  <div class="project">
+    <div class="video-wrapper">
+      <iframe
+        src="https://player.vimeo.com/video/208358653?h=b244de2512"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <h3>Hawaii (2017)</h3>
+    <p>This process explored opposite dynamics both simultaneously and separately.</p>
+  </div>
+  <div class="project">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/uKJcCuIs3rc?si=wrnXiAZ1OrvnejuO"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <h3>The Walk to the Front is Complicated (2014)</h3>
+    <p>This process explored variation in repetition as tied to changes in experience.</p>
+  </div>
+  <div class="project">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/t5CXe_8BbQE?si=jcdi9wHG1TjnAmI9"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <h3>QED (2013)</h3>
+    <p>
+      This process explored how to physicalize <a
+        href="https://arxiv.org/pdf/1408.4353.pdf"
+        target="_blank"
+        rel="noopener noreferrer">mathematical research in algebraic geometry.</a
+      >
+    </p>
+  </div>
+  <div class="project">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/hdl3JwTlD1U?si=4Y3AWx5KT1-u4WH7"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <h3>Seriously? (2012)</h3>
+    <p>This process explored a choreographic definition of humor as the unexpected.</p>
+  </div>
+</section>
+
+<style>
+  .choreography {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    .choreography {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .project {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .project {
+      text-align: left;
+    }
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .project h3 {
+    font-size: var(--size-lg);
+    margin-bottom: 0.5rem;
+  }
+</style>

@@ -1,8 +1,8 @@
 ---
 import ImageCard from '../layout/ImageCard.astro'
-import childhoodImage from '../../assets/1.png'
-import collegeImage from '../../assets/2.png'
-import teachingImage from '../../assets/3.png'
+import childhoodImage from '../../assets/childhood.png'
+import collegeImage from '../../assets/college.png'
+import teachingImage from '../../assets/teaching.png'
 import graduateSchoolImage from '../../assets/graduate-school.png'
 import currentlyImage from '../../assets/currently.png'
 ---
@@ -117,7 +117,7 @@ import currentlyImage from '../../assets/currently.png'
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
 
   @media (min-width: 1024px) {
@@ -135,9 +135,7 @@ import currentlyImage from '../../assets/currently.png'
     border-radius: 0.5rem;
     color: var(--color-black);
     background-color: var(--color-grey);
-    transition:
-      color var(--transition-medium),
-      background-color var(--transition-medium);
+    transition: all var(--transition-medium);
     cursor: pointer;
   }
 
@@ -175,7 +173,7 @@ import currentlyImage from '../../assets/currently.png'
     background: var(--color-light-pink);
     border: none;
     border-radius: 3rem;
-    transition: background-color var(--transition-medium);
+    transition: all var(--transition-medium);
     cursor: pointer;
   }
 

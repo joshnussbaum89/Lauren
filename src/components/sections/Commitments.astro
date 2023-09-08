@@ -1,9 +1,9 @@
-<section id="commitments" class="commitments site-section">
-  <div class="content-container">
+<section class="commitments site-section">
+  <div class="site-container">
     <div class="content">
-      <p>Over the past few decades...</p>
-      <p>
-        <span>
+      <h3>Over the past few decades...</h3>
+      <div class="content-body">
+        <p>
           The field of the Learning Sciences has experienced generational shifts, from regarding
           conceptualizations of learning as an individual phenomenon to recognizing learning as a
           process mediated by dynamic histories, cultures, and social relations. Researchers are now
@@ -16,14 +16,14 @@
           dismantling oppressive systems and imagining and building humanizing worlds. Thus in this
           statement I articulate my commitments to engage identities as opportunities for praxis,
           privilege artistic ways of knowing, and foster collectivity and care.
-        </span>
-      </p>
+        </p>
+      </div>
     </div>
 
     <div class="content">
-      <p>Engaging Identities as Opportunities for Praxis</p>
-      <p>
-        <span>
+      <h3>Engaging Identities as Opportunities for Praxis</h3>
+      <div class="content-body">
+        <p>
           As a sociocultural theorist of learning, I am acutely aware of the ways (felt and
           perceived) identities shape how we see, understand, and engage in the world. My
           multifacated identities as a white, straight, cis-genedered, able-bodied, Jewish, female
@@ -32,10 +32,8 @@
           social hierarchies. Thus, I intentionally create opportunities to interrogate and learn
           from collaborators', students, and my own subjective positionalities to create more
           dignifying worlds.
-        </span>
-      </p>
-      <p>
-        <span>
+        </p>
+        <p>
           For example, in my second writing sample my colleagues and I use an analytic lens that
           combines prolepsis and telos to help bring into focus how educators' ideologies of race,
           class, and gender influence what experiences from the past they draw on, which shapes
@@ -57,10 +55,8 @@
           of say, disrespect for others' participation), has been shaped by my whiteness. Thus, it
           is important to continually reflect and question what I read as productive, good, and
           desirable to make visible how white supremacy influences their social construction.
-        </span>
-      </p>
-      <p>
-        <span>
+        </p>
+        <p>
           Additionally, I have taken up the practice of continuously returning to data with others
           to illuminate norms and social dynamics that are obscured by my own positionality. When
           co-analyzing data with dancer collaborators, we recognized an interaction with four young
@@ -77,14 +73,14 @@
           color navigated in our own design and the impactful ways this teacher helped steer this
           interaction towards a meaningful, empowering learning experience (manuscript in
           preparation).
-        </span>
-      </p>
+        </p>
+      </div>
     </div>
 
     <div class="content">
-      <p>Privileging Artistic Ways of Knowing</p>
-      <p>
-        <span>
+      <h3>Privileging Artistic Ways of Knowing</h3>
+      <div class="content-body">
+        <p>
           My history and identity as a dance artist informs my political commitment to positioning
           dance as a form of research and dancers as collaborative research partners. Dance has too
           often been cast as an artistic and physical pursuit separate from the superior, thinking
@@ -106,14 +102,14 @@
           to include embodiment and movement as communicating sociopolitical discourses. I am
           excited to expand this pedagogical practice by including works of art as texts in my
           syllabi in the future.
-        </span>
-      </p>
+        </p>
+      </div>
     </div>
 
     <div class="content">
-      <p>Fostering Collectivity & Care</p>
-      <p>
-        <span>
+      <h3>Fostering Collectivity & Care</h3>
+      <div class="content-body">
+        <p>
           In centering choreographic inquiry processes such as the practice of “physical research”
           that the dancers I collaborate with engage in (Vogelstein, ISLS, 2021), I also center
           collective practices in my research. For example, my dance collaborators and I have been
@@ -123,10 +119,8 @@
           environments where what counts as learning can often center hyper-individualism, normative
           and simplified views of correct thinking, and competitiveness. Such STEM environments
           typically ignore potential resources and cultural assets for creative production.
-        </span>
-      </p>
-      <p>
-        <span>
+        </p>
+        <p>
           Leveraging collectivity and fostering care in STEM learning environments is a central
           commitment in my research, mentorship and service. In mentoring Learning & Design master's
           students in their capstone projects, I started each year by meeting as a group to
@@ -145,8 +139,8 @@
           feedback - above and beyond what is expected. She is intentionally present to celebrate
           our successes or grieve our losses. She is a powerful uniting force, and the DSA would not
           be what it is without her.”
-        </span>
-      </p>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -155,61 +149,40 @@
   .content {
     max-width: 800px;
     margin: 0 auto 4rem;
-    border-radius: 1.25rem;
   }
 
   @media (min-width: 768px) {
     .content {
       margin-bottom: 8rem;
-      background-color: var(--color-light-purple);
     }
+  }
+
+  .content h3 {
+    padding: 2rem;
+    font-size: var(--size-lg);
+    text-align: center;
   }
 
   .content p {
     line-height: 1.8;
+    font-size: var(--size-md);
     text-align: center;
   }
 
   @media (min-width: 768px) {
     .content p {
-      text-align: initial;
-      padding: 2rem;
+      text-align: left;
     }
   }
 
-  /* Title text */
-  .content p:first-of-type {
+  .content p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .content-body {
     padding: 2rem;
-    font-size: var(--size-lg);
-    font-weight: bold;
-  }
-
-  @media (min-width: 768px) {
-    .content p:first-of-type {
-      float: left;
-      max-width: 375px;
-      margin: 0 2rem 1rem 0;
-      text-align: center;
-      background-color: var(--color-white);
-      border-radius: 1rem 0 1rem 0;
-    }
-  }
-
-  .content p:nth-child(2) span {
-    border-radius: 1.25rem 1.25rem 0 0;
-  }
-
-  .content p span {
-    display: inline-block;
-    padding: 2rem;
-    font-size: var(--size-md);
-    background-color: var(--color-light-purple);
-  }
-
-  @media (min-width: 768px) {
-    .content p span {
-      display: inline;
-      padding: 0;
-    }
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    border-radius: 1.25rem;
   }
 </style>

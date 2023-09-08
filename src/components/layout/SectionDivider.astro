@@ -11,6 +11,7 @@ const { title, theme, imageUrl, isArrow, description } = Astro.props
 ---
 
 <div
+  id={title.toLowerCase()}
   class:list={[
     'divider',
     {
@@ -29,6 +30,9 @@ const { title, theme, imageUrl, isArrow, description } = Astro.props
 
 <style>
   .divider {
+    scroll-margin-top: 112px;
+    position: relative;
+    z-index: -1;
     min-height: 50vh;
     background-size: cover;
     background-attachment: fixed;

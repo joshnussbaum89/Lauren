@@ -9,17 +9,17 @@ import Teaching from '../components/sections/Teaching.astro'
 import Commitments from '../components/sections/Commitments.astro'
 import Choreography from '../components/sections/Choreography.astro'
 import Footer from '../components/layout/Footer.astro'
-import dividerOne from '../assets/divider-1.png'
-import dividerTwo from '../assets/divider-2.jpg'
-import dividerThree from '../assets/divider-3.png'
-import dividerFour from '../assets/divider-4.png'
-import divderFive from '../assets/divider-5.png'
+import dividerAbout from '../assets/divider-about.png'
+import dividerResearch from '../assets/divider-research.jpg'
+import dividerTeaching from '../assets/divider-teaching.png'
+import dividerCommitments from '../assets/divider-commitments.png'
+import dividerChoreography from '../assets/divider-choreography.png'
 
-const dividerOneImage = await getImage({ src: dividerOne })
-const dividerTwoImage = await getImage({ src: dividerTwo })
-const dividerThreeImage = await getImage({ src: dividerThree })
-const dividerFourImage = await getImage({ src: dividerFour })
-const dividerFiveImage = await getImage({ src: divderFive })
+const dividerAboutImage = await getImage({ src: dividerAbout })
+const dividerResearchImage = await getImage({ src: dividerResearch })
+const dividerTeachingImage = await getImage({ src: dividerTeaching })
+const dividerCommitmentsImage = await getImage({ src: dividerCommitments })
+const dividerFiveImage = await getImage({ src: dividerChoreography })
 ---
 
 <Layout
@@ -27,11 +27,11 @@ const dividerFiveImage = await getImage({ src: divderFive })
   description="Lauren Vogelstein is a postdoctoral associate at NYU in the department of Teaching & Learning. She designs and studies STEAM learning environments where the A in STEAM is as respected as the STEM disciplines involved."
 >
   <Header />
-  <SectionDivider title="About" imageUrl={dividerOneImage.src} isArrow={true} />
+  <SectionDivider title="About" imageUrl={dividerAboutImage.src} isArrow={true} />
   <About />
   <SectionDivider
     title="Research"
-    imageUrl={dividerTwoImage.src}
+    imageUrl={dividerResearchImage.src}
     description={`I work to widen the resources made available for learning and doing STEM in order to provide
       spaces where youth feel the expressiveness of their joint sense-making is valued and
       nurtured.`}
@@ -40,42 +40,14 @@ const dividerFiveImage = await getImage({ src: divderFive })
   <Research />
   <SectionDivider
     title="Teaching"
-    imageUrl={dividerThreeImage.src}
+    imageUrl={dividerTeachingImage.src}
     description={`Continually working through what it means for learning to occur through shifts in participation in communities of practice.`}
     isArrow={true}
   />
   <Teaching />
-  <SectionDivider title="Commitments" imageUrl={dividerFourImage.src} isArrow={true} />
+  <SectionDivider title="Commitments" imageUrl={dividerCommitmentsImage.src} isArrow={true} />
   <Commitments />
   <SectionDivider title="Choreography" imageUrl={dividerFiveImage.src} isArrow={true} />
   <Choreography />
   <Footer />
 </Layout>
-
-<script>
-  function handleActiveSiteSectionsOnScroll() {
-    if (!window.IntersectionObserver) return console.log('IntersectionObserver not supported')
-
-    // Grab sections
-    const sections = document.querySelectorAll('.site-section') as NodeListOf<HTMLElement>
-
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const section = entry.target as HTMLElement
-          section.classList.add('active')
-        }
-      })
-    }, options)
-
-    sections.forEach((section) => observer.observe(section))
-  }
-
-  document.addEventListener('scroll', handleActiveSiteSectionsOnScroll)
-</script>

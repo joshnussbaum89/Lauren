@@ -49,3 +49,31 @@ const socialImageURL = new URL('../assets/lauren-headshot.png', canonicalURL)
     <slot />
   </body>
 </html>
+
+<script>
+  function handleActiveSiteSectionsOnScroll() {
+    if (!window.IntersectionObserver) return console.log('IntersectionObserver not supported')
+
+    // Grab sections
+    const sections = document.querySelectorAll('.site-section')
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0,
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = entry.target
+          section.classList.add('active')
+        }
+      })
+    }, options)
+
+    sections.forEach((section) => observer.observe(section))
+  }
+
+  document.addEventListener('scroll', handleActiveSiteSectionsOnScroll)
+</script>

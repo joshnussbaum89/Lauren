@@ -70,14 +70,9 @@
     );
   }
 
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
   .wrapper {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -93,18 +88,31 @@
     font-size: initial;
   }
 
+  .site-map li {
+    margin-bottom: 0.5rem;
+  }
+
+  .site-map a {
+    color: var(--color-black-faded);
+  }
+
+  .site-map a:hover {
+    color: var(--color-light-pink);
+  }
+
   .icons {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
 
-  .site-map li {
-    margin-bottom: 0.5rem;
+  .icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-black-faded);
   }
 
-  footer > p {
-    margin-top: 1.5rem;
+  .footer-text {
     text-align: center;
   }
 </style>

@@ -115,20 +115,19 @@ import currentlyImage from '../../assets/currently.png'
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .categories {
-      margin-bottom: 5rem;
+      justify-content: center;
     }
   }
 
   .categories span {
     padding: 0.5rem 1rem;
-    font-size: var(--size-base);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -164,6 +163,7 @@ import currentlyImage from '../../assets/currently.png'
   .post p {
     margin-bottom: 2rem;
     font-size: var(--size-md);
+    line-height: 1.8;
     color: var(--color-black-faded);
   }
 </style>

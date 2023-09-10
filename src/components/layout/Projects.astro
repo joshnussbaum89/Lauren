@@ -258,6 +258,7 @@ import steamMaker from '../../assets/steam-maker.png'
   .tab {
     margin-right: 1rem;
     font-size: var(--size-lg);
+    letter-spacing: 2px;
     color: var(--color-black-faded);
     transition: var(--transition-medium);
     cursor: pointer;
@@ -324,9 +325,10 @@ import steamMaker from '../../assets/steam-maker.png'
   }
 
   .project-info {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
   }
 
   .project h4,
@@ -342,22 +344,24 @@ import steamMaker from '../../assets/steam-maker.png'
 
   .project p {
     color: var(--color-black-faded);
+    font-size: var(--size-md);
+    line-height: 1.8;
   }
 
   .project h4 a {
-    color: var(--color-black);
+    text-decoration: none;
+    color: var(--color-light-pink);
   }
 
   .project:hover h4,
   .project:hover p,
-  .project:hover a,
-  .project:hover h4 a {
+  .project:hover a {
     color: var(--color-white);
   }
 
   .project:hover a:hover,
   .project:hover h4 a:hover {
-    color: var(--color-light-pink);
+    color: var(--color-pink);
   }
 
   .modal-info {
@@ -450,11 +454,11 @@ import steamMaker from '../../assets/steam-maker.png'
   }
 
   .modal-html a {
-    color: var(--color-black);
+    color: var(--color-light-pink);
   }
 
   .modal-html a:hover {
-    color: var(--color-light-pink);
+    color: var(--color-pink);
   }
 </style>
 

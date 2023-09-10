@@ -61,15 +61,10 @@
 
   --gradient-blue-purple: linear-gradient(-45deg, var(--color-blue) 25%, var(--color-purple));
 
-  /* line-height: var(--size-md) */
   --size-sm: 0.875rem;
-  /* line-height: 1.5rem */
   --size-base: 1rem;
-  /* line-height: 1.75rem */
   --size-md: 1.25rem;
-  /* line-height: 2rem */
   --size-lg: 1.5rem;
-  /* line-height: 2.5rem */
   --size-xl: 2.25rem;
   --size-xxl: 3rem;
   --size-xxxl: 4rem;
@@ -170,17 +165,17 @@ p {
 li,
 p {
   font-size: var(--size-base);
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 a {
-  text-underline-offset: 0.1rem;
-  color: var(--color-black-faded);
+  text-decoration: none;
+  color: var(--color-light-pink);
   transition: var(--transition-normal);
 }
 
 a:hover {
-  color: var(--color-light-pink);
+  color: var(--color-pink);
 }
 
 ul {

@@ -65,6 +65,7 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
     .content {
       display: flex;
       justify-content: space-evenly;
+      gap: 2rem;
     }
   }
 
@@ -81,9 +82,14 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
   }
 
   .signature img:nth-child(1) {
-    width: 100%;
-    max-width: 650px;
-    margin-bottom: -2rem;
+    width: 90%;
+    max-width: 450px;
+  }
+
+  @media (max-height: 700px) {
+    .signature img:nth-child(1) {
+      max-width: 39vh;
+    }
   }
 
   .signature img:nth-child(2) {
@@ -115,13 +121,19 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
     }
   }
 
+  @media (min-width: 1024px) and (max-height: 700px) {
+    .info {
+      margin-bottom: 2rem;
+    }
+  }
+
   .description {
     max-width: 500px;
     margin: 0 auto;
   }
 
   .description p:not(:last-of-type) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 </style>
 

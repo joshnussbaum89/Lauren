@@ -8,24 +8,6 @@
 }
 
 @font-face {
-  font-family: 'Cooper Light Italic';
-  src: url('/fonts/CooperBT-LightItalic.woff2') format('woff2'),
-    url('/fonts/CooperBT-LightItalic.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cooper Bold Italic';
-  src: url('/fonts/CooperBT-BoldItalic.woff2') format('woff2'),
-    url('/fonts/CooperBT-BoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Cooper Light';
   src: url('/fonts/CooperBT-Light.woff2') format('woff2'),
     url('/fonts/CooperBT-Light.woff') format('woff');
@@ -35,10 +17,8 @@
 }
 
 :root {
-  --font-cooper-light: 'Cooper Light', sans-serif;
   --font-cooper-bold: 'Cooper Bold', sans-serif;
-  --font-cooper-light-italic: 'Cooper Light Italic', sans-serif;
-  --font-cooper-bold-italic: 'Cooper Bold Italic', sans-serif;
+  --font-cooper-light: 'Cooper Light', sans-serif;
 
   --color-black: #000;
   --color-black-faded: #2e3438;

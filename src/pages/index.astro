@@ -27,27 +27,29 @@ const dividerFiveImage = await getImage({ src: dividerChoreography })
   description="Lauren Vogelstein is a postdoctoral associate at NYU in the department of Teaching & Learning. She designs and studies STEAM learning environments where the A in STEAM is as respected as the STEM disciplines involved."
 >
   <Header />
-  <SectionDivider title="About" imageUrl={dividerAboutImage.src} isArrow={true} />
-  <About />
-  <SectionDivider
-    title="Research"
-    imageUrl={dividerResearchImage.src}
-    description={`I work to widen the resources made available for learning and doing STEM in order to provide
+  <main>
+    <SectionDivider title="About" imageUrl={dividerAboutImage.src} isArrow={true} />
+    <About />
+    <SectionDivider
+      title="Research"
+      imageUrl={dividerResearchImage.src}
+      description={`I work to widen the resources made available for learning and doing STEM in order to provide
       spaces where youth feel the expressiveness of their joint sense-making is valued and
       nurtured.`}
-    isArrow={true}
-  />
-  <Research />
-  <SectionDivider
-    title="Teaching"
-    imageUrl={dividerTeachingImage.src}
-    description={`Continually working through what it means for learning to occur through shifts in participation in communities of practice.`}
-    isArrow={true}
-  />
-  <Teaching />
-  <SectionDivider title="Commitments" imageUrl={dividerCommitmentsImage.src} isArrow={true} />
-  <Commitments />
-  <SectionDivider title="Choreography" imageUrl={dividerFiveImage.src} isArrow={true} />
-  <Choreography />
+      isArrow={true}
+    />
+    <Research />
+    <SectionDivider
+      title="Teaching"
+      imageUrl={dividerTeachingImage.src}
+      description={`Continually working through what it means for learning to occur through shifts in participation in communities of practice.`}
+      isArrow={true}
+    />
+    <Teaching />
+    <SectionDivider title="Commitments" imageUrl={dividerCommitmentsImage.src} isArrow={true} />
+    <Commitments />
+    <SectionDivider title="Choreography" imageUrl={dividerFiveImage.src} isArrow={true} />
+    <Choreography />
+  </main>
   <Footer />
 </Layout>

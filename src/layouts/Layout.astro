@@ -55,10 +55,12 @@ const socialImageURL = new URL('/headshot.png', canonicalURL)
 </html>
 
 <script>
+  /**
+   * Add fade in animation to site section that is currently in view
+   */
   function handleActiveSiteSectionsOnScroll() {
     if (!window.IntersectionObserver) return console.log('IntersectionObserver not supported')
 
-    // Grab sections
     const sections = document.querySelectorAll('.site-section')
 
     const options = {

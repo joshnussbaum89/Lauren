@@ -17,6 +17,8 @@
 }
 
 :root {
+  --max-width: 1440px;
+
   --font-cooper-bold: 'Cooper Bold', sans-serif;
   --font-cooper-light: 'Cooper Light', sans-serif;
 
@@ -39,7 +41,18 @@
   --color-blue: #5b7eae;
   --color-box-shadow: #0000001a;
 
+  /* DRESS COLORS */
+  /* --color-green: #036a6b;
+  --color-light-green: #6fbcc4; 
+  --color-pink: #d33f33;
+  --color-light-pink: #ca81b6;
+  --color-purple: var(--color-blue); 
+  --color-blue: #0b1c34; */
+
   --gradient-blue-purple: linear-gradient(-45deg, var(--color-blue) 25%, var(--color-purple));
+
+  /* TODO: should background be a gradient? */
+  /* --gradient-blue-purple: var(--color-blue); */
 
   --size-sm: 0.875rem;
   --size-base: 1rem;

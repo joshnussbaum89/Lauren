@@ -1,4 +1,6 @@
 ---
+import ProjectCard from './ProjectCard.astro'
+
 const projectData = [
   {
     id: 'choreographing-science',
@@ -6,6 +8,77 @@ const projectData = [
     description: '(Co-PI NSF AISL Award #2115773 2021-Present)',
     link: 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=2115773&HistoricalAwards=false',
     type: 'current',
+    modalHtml: /* HTML */ `
+      <h4>
+        <a
+          href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2115773&HistoricalAwards=false"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Choreographing Science</a
+        >
+      </h4>
+      <p>
+        This is an NSF funded AISL design based research project aimed at developing dance-science
+        camps for middle schoolers, scientists, and choreographers to collaboratively engage in
+        scientific inquiry that leverages choreographic modeling and agent based modeling. Our
+        primary aims are for scientists to see youths' ideas and dance-based perspectives as
+        generative for their research and for middle schoolers to feel valued in authentic
+        scientific inquiry. Our findings point to the expansive use of dance to support new ideas of
+        science concepts through robust and equitable forms of participation.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Champion, C., Wagh, A., & Appleby, L. (2024) Growing into
+        Collective Forms of Scientific Inquiry: The dignifying affirmation of timid, half-baked
+        ideas.
+        <em
+          >To be published in the proceedings of the International Society of the Learning Sciences
+          Annual Meeting 2024.</em
+        >
+      </p>
+      <p>
+        Wagh, A., <strong>Vogelstein, L.</strong>, & Champion, D. (2024). Fused Representations:
+        Linking Choreographic and Digital NetLogo Modeling through Intermodal Inquiry.
+        <em
+          >To be published in the proceedings of the International Society of the Learning Sciences
+          Annual Meeting 2024.</em
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong> (2024). Using Choreographic Lenses to Provide Evidence of
+        (Embodied) Learning: Pushing beyond word-based evidence of changes in participation. In
+        <strong>Vogelstein, L.</strong> & Woods, P. symposium, Doing Learning Sciences Research In &
+        Through the Arts.
+        <em
+          >To be published in the proceedings of the International Society of the Learning Sciences
+          Annual Meeting 2024.</em
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Burley, X., Springer, A., Champion, D., Wagh, A.,
+        Steinberg, R., & Varone, D. (2024). Leveraging co-analysis to disrupt normative citation
+        practices in interdisciplinary collaborations with artists. In Pierson, A., & Keifert, D. T.
+        symposium, Co-Research in Video Analysis: Shifts Towards Ethical Validity.
+        <em
+          >To be published in the proceedings of the International Society of the Learning Sciences
+          Annual Meeting 2024.</em
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Steinberg, R., Thomas, C., Champion, D., Wagh, A., &
+        Appleby, L. (2024). Cultivating care through choreographic forms of interaction analysis. In
+        Love, C. & Jen, T. symposium, Caring Relations Across Interaction Analysis Labs.
+        <em
+          >To be published in the proceedings of the International Society of the Learning Sciences
+          Annual Meeting 2024.</em
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Champion, D., & Wagh, A. (2022, April). Conjecture Mapping
+        Design & Theoretical Conjectures Explicitly to a Funding Audience. Paper presented in
+        symposium Conjecture Mapping: New Approaches to broadening processes of educational design
+        research at the 2022 American Education Research Association Conference San Diego, CA.
+      </p>
+    `,
   },
   {
     id: 'algorithmic-audits',
@@ -13,6 +86,33 @@ const projectData = [
     description: '(Postdoctoral Associate 2023-Present)',
     link: 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=2333469&HistoricalAwards=false',
     type: 'current',
+    modalHtml: /* HTML */ `
+      <h4>
+        <a
+          href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2333469&HistoricalAwards=false"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Algorithmic Audits by Youth</a
+        >
+      </h4>
+      <p>
+        This NSF funded RAPID ITEST project addresses the need to support high schooler's emergent
+        understandings of the biases inherent in Artificial Intelligence (AI) and Machine Learning
+        (ML) systems as these technologies rapidly develop and influence their everyday lives. The
+        project, which includes phases of student co-design sessions, after school programming, and
+        summer computational design workshops, incorporates participatory design research to expand
+        conceptual clarity on algorithm auditing as an embodied computational literacy. The aims of
+        this project are to (1) understand students' everyday engagement with TikTok filters as
+        existing audit-like practices and AI/ML literacies and (2) explore how leveraging these
+        audit practices to design their own filters can support their understandings of biases in
+        AI/ML systems. As a postdoctoral associate on this project, my research has focused on youth
+        participants' critical understandings of how AI/ML technologies (mis)represent their bodies.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Morales-Navarro, L., Kafai, Y., & Metaxa, D. (Under
+        review). Youth Auditing for Algorithmic Justice as Computational Empowerment.
+      </p>
+    `,
   },
   {
     id: 'pila-cs',
@@ -20,6 +120,97 @@ const projectData = [
     description: '(Postdoctoral Associate 2022-2024)',
     link: 'https://www.pila-cs.org/',
     type: 'previous',
+    modalHtml: /* HTML */ `
+      <h4>
+        <a href="https://www.pila-cs.org/" target="_blank" rel="noopener noreferrer">PiLa-CS</a>
+      </h4>
+      <p>
+        <a
+          href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1837446"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Participating in Literacies and Computer Science (PiLa-CS) is an NSF STEM+C (PIs Drs.
+          Christopher Hoadley, Jasmine Ma, & Laura Ascenzi-Moreno)</a
+        >
+        Research Practice Partnership between New York City schools and researchers at New York
+        University and the City University of New York to support bi/multilingual kids participating
+        in the CS for All initiative. My role in the project focused on supporting and learning from
+        teachers as they developed equity-oriented design and teaching practices for integrating CS
+        into their classrooms of bi/multilingual learners. Through co-design of professional
+        development sessions and follow up observations and interviews with teachers, we explored
+        the theoretical and design-based implications of using syncretism to bring together everyday
+        and academic ways of knowing in ways that disrupt hegemonic knowledge hierarchies.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Ma, J. Y., Vogel, S., Radke, S., Hoadley, C.,
+        Ascenzi-Moreno, L., Barrales, W., Wy, J., & Wu, F. (2024). “An interesting mental exercise”:
+        Making space for teachers' syncretic pedagogical content knowledge. In Jones, K., & McBride,
+        C. symposium, Applying Syncretic Frameworks in the Learning Sciences.
+        <em
+          >To be published in the proceedings of the International Society of the Learning Sciences
+          Annual Meeting 2024.</em
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, McBride, C., Ma, J., Wilkerson, M., Vogel, S., Barrales,
+        W., Ascenzi-Moreno, L., Hoadley, C., & Gutiérrez, K. (2023). Storytelling “in theory”:
+        Re-imagining computational literacies through the lenses of syncretism and translanguaging.
+        In
+        <em
+          >Proceedings of the International Society of the Learning Sciences Annual Meeting 2023
+          ICLS, 800-807.</em
+        >
+        <a
+          href="https://repository.isls.org/handle/1/10331"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/10331</a
+        >
+      </p>
+      <p>
+        James, S., <strong>Vogelstein, L.</strong>, Ma, J., Vogel, S., Barrales, W., Ascenzi-Moreno,
+        L., & Hoadley, C. (2023). Research as Relational: Stories of ever-present learning between
+        undergraduate research interns and project researchers. In
+        <em
+          >Proceedings of the International Society of the Learning Sciences Annual Meeting 2023
+          ICLS</em
+        >, 617-624. Nominated for best student paper award.
+        <a
+          href="https://repository.isls.org/handle/1/10306"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/10306</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Vogel, S., Ma, J. Y., Hoadley, C., Ascenzi-Moreno, L., &
+        Barrales, W. (April, 2024).
+        <em
+          >In-Service CS Teachers' & Researchers' Notions of Equity in a Professional Learning
+          Community.</em
+        >
+        To be presented at the 2024 American Education Research Association Conference Philadelphia,
+        PA.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Vogel, S., Hoadley, C., Radke, S. C., Ascenzi-Moreno, L.,
+        Ma, J. Y., Barrales, W., & James, S. (2023, April).
+        <em
+          >Moving Towards Syncretic Literacies to Validate Student Sense-Making in
+          Computing-Integrated Language Arts.</em
+        >
+        2023 American Education Research Association Conference Chicago, IL.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Vogel, S., Barrales, W., Ascenzi-Moreno, L., Hoadley, C., &
+        Ma, J. (2022, April).
+        <em
+          >Translanguaging Towards More Expansive Computing Education: Reflections from a
+          Professional Learning Community.</em
+        >
+        2022 American Education Research Association Conference San Diego, CA.
+      </p>
+    `,
   },
   {
     id: 'camps',
@@ -27,6 +218,112 @@ const projectData = [
     description: '(Graduate Research Assistant 2017-2021)',
     link: '',
     type: 'previous',
+    modalHtml: /* HTML */ `
+      <h4>CAMPS</h4>
+      <p>
+        Computational And Mathematics Play Spaces (CAMPS) was a design based research NSF funded
+        STEM+C study (PIs Drs. Melissa Gresalfi & Corey Brady) aimed at exploring how to incorporate
+        mathematical and computational thinking together in the context of art making. As a graduate
+        research assistant on the project, I levereged my expertise on embodiment and dance to
+        co-design dance-based math & computational activities with dancers and support middle school
+        teachers to lead these activities in a summer day-camp for middle school learners.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Steinberg, R., Thomas, C., & Brady, C. (Under Review,
+        Revise & Resubmit). Interdisciplinary Collaboration in Design Research: A process of
+        composing across design, analysis, and relations. <em>Cognition & Instruction</em>.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, & Brady, C. (2019). Taking the patch perspective: A
+        Comparative analysis of a patch based participatory simulation. In
+        <em>Proceedings of the 2019 Conference on Computer Supported Collaborative Learning</em>
+        Lyon, France, 512-519.
+        <a href="http://repository.isls.org/handle/1/1611" target="_blank" rel="noopener noreferrer"
+          >http://repository.isls.org/handle/1/1611</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Brady, C., Steinberg, R., & Thomas, C. (2021). Developing
+        computational double awareness through rule-based dance games. In
+        <strong>Vogelstein, L</strong>. & Solomon, F. symposium, Embodying, STEM: Learning at the
+        Intersection of Dance and STEM.
+        <em
+          >In Proceedings of the International Society of the Learning Sciences Annual Meeting
+          2021</em
+        >, 819-826.
+        <a
+          href="https://repository.isls.org/handle/1/7588"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/7588</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein. L.</strong>, Brady, C., Steinberg, R., Thomas, C. (2021). Flares in the
+        soup game: Improvisational collective choreography and computational expressivity. In Wagh,
+        A. & Dickies, A. symposium, Expansive Modeling: Broadening the scope of modeling in K-12
+        education. In
+        <em
+          >Proceedings of the International Society of the Learning Sciences Annual Meeting 2021</em
+        >, 832-833.
+        <a
+          href="https://repository.isls.org/handle/1/7589"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/7589</a
+        >
+      </p>
+      <p>
+        Brady, C. & <strong>Vogelstein, L.</strong> (2023). Epistemic Rekeying: Epistemic tensions
+        across disciplines as opportunities for artistic response. In
+        <em
+          >Proceedings of the Annual Conference of the North American Chapter of the International
+          Group for the Psychology of Mathematics Education 2023 Volume 2</em
+        >, 301-309.
+        <a
+          href="https://www.pmena.org/pmenaproceedings/PMENA%2045%202023%20Proceedings%20Vol%202.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://www.pmena.org/pmenaproceedings/PMENA%2045%202023%20Proceedings%20Vol%202.pdf</a
+        >
+      </p>
+      <p>
+        Brady, C., <strong>Vogelstein, L.</strong>, Gresalfi, M., Knowe, M. (2021). Circular
+        reasoning: Shifting epistemological frames across mathematics and coding activities.
+        <em>In Proceedings of the Psychology of Mathematics Education North American Chapter</em>
+        annual meeting, Philadelphia, PA, 1182-1190.
+        <a
+          href="https://www.pmena.org/pmenaproceedings/PMENA%2043%202021%20Proceedings.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://www.pmena.org/pmenaproceedings/PMENA%2043%202021%20Proceedings.pdf</a
+        >
+      </p>
+      <p>
+        Brady, C., & <strong>Vogelstein, L</strong>. (2020) Patches as an expressive medium for
+        agent-based modeling and programming. <em>Proceedings of Constructionism, 2020</em>,
+        436-448.
+        <a
+          href="https://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf</a
+        >
+      </p>
+      <p>
+        Gresalfi, M., Bell, A., Brady, C., & <strong>Vogelstein, L.</strong> (2019). Same place, new
+        rules: The joint accomplishment of engagement. In Cheng, B. H. symposium, Theorizing and
+        measuring collective productive disciplinary engagement. In
+        <em>Proceedings of the 2019 Conference on Computer Supported Collaborative Learning</em>,
+        Lyon, France, 775-782.
+        <a
+          href="https://repository.isls.org/handle/1/4504"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/4504</a
+        >
+      </p>
+    `,
   },
   {
     id: 'physical-research',
@@ -34,6 +331,72 @@ const projectData = [
     description: '(2017-2022)',
     link: '',
     type: 'previous',
+    modalHtml: /* HTML */ `
+      <h4>Physical Research</h4>
+      <p>
+        A two year ethnographic study of a contemporary dance company's choreographic inquiry
+        practice they referred to as “physical research.” As the second study of my dissertation, I
+        attended rehearsals weekly over the course of two seasons of the company's work to document
+        their practice of physical research via field notes and video recordings. Findings have
+        pointed to the interactional structure of physical research as an embodied and ensemble
+        practice in which a choreographer and dances create proposals and responses to each others'
+        ideas physically as they learn together.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong> (2021).
+        <em
+          >Mathematical physical research: Mathematical agency in the practices of professional
+          dancers.</em
+        >
+        Proceedings of the International Society of the Learning Sciences Annual Meeting 2021 (pp.
+        299-306). Best student paper nominee for Learning Sciences.
+        <a
+          href="https://drive.google.com/file/d/1NuYhdOKDgpp_omNH6qXKYmAh2G5_c9iv/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://drive.google.com/file/d/1NuYhdOKDgpp_omNH6qXKYmAh2G5_c9iv/view</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong> (2020) Physical research: Professional dancers exploring
+        collective possibilities in a solidifying substrate.
+        <em>Proceedings of the International Conference of the Learning Sciences</em>, 2020,
+        737-739.
+        <a
+          href="https://repository.isls.org/handle/1/6741"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/6741</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong> & Hall, R. (2020). The push that never made sense to me: the
+        substrate of dancers' professional intrinsic and extrinsic vision. In Keifert, D. T. &
+        Enyedy, N. symposium, Analytical designs: Goodwin's substrates as a tool for studying
+        learning. In <em>proceedings of the International Conference of the Learning Sciences</em>,
+        2020, 1471-1478.
+        <a
+          href="https://repository.isls.org/handle/1/6352"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/6352</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L</strong> & Radke, S. (2020). Making use of video for other purposes:
+        When participants use video data as part of their practice. In Hennessey Elliott, C. &
+        Radke, S. symposium, Whose video?: Surveying implications for participants engagement in
+        video recording practices in ethnographic research. In
+        <em>proceedings of the International Conference of the Learning Sciences</em>, 2020,
+        414-421.
+        <a
+          href="https://repository.isls.org/handle/1/6666"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/6666</a
+        >
+      </p>
+    `,
   },
   {
     id: 'ensemble-math',
@@ -41,6 +404,60 @@ const projectData = [
     description: '(2017-2022)',
     link: '',
     type: 'previous',
+    modalHtml: /* HTML */ `
+      <h4>Ensemble Math</h4>
+      <p>
+        The first study in my dissertation explored how reenacting ensemble choreography could be
+        the grounds for expansive mathematical activity. Designed as a Vygotskian double stimulation
+        interview, participants in small groups viewed a mathematically salient piece of
+        <a
+          href="https://www.youtube.com/watch?v=N_qXm9HY9Ro"
+          target="_blank"
+          rel="noopener noreferrer"
+          >ensemble choreography from the Rio Olympic opening ceremony</a
+        >
+        and then were given the task of reenacting certain movement phrases (e.g., folding a similar
+        square prop into a triangle). I interviewed four quartets for this project, two quartets of
+        middle school youth, one quartet of scientists who became STEM educators, one quartet of
+        professional dancers.
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Brady, C., & Hall, R. (2019). Reenacting mathematical
+        concepts found in large-scale dance performance can provide both material and method for
+        ensemble learning. <em>ZDM Mathematics Education</em> 51(2).
+        <a
+          href="https://link.springer.com/article/10.1007/s11858-019-01030-2"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://link.springer.com/article/10.1007/s11858-019-01030-2</a
+        >
+      </p>
+      <p>
+        <strong>Vogelstein, L.</strong>, Brady, C., & Hall, R. (2017). Putting our bodies on the
+        line: Mathematizing ensemble performances. In Proceedings of the
+        <em>Psychology of Mathematics Education North American Chapter</em> annual meeting,
+        Indianapolis, IA, 383-386.
+        <a
+          href="http://www.pmena.org/pmenaproceedings/PMENA%2039%202017%20Proceedings.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >http://www.pmena.org/pmenaproceedings/PMENA%2039%202017%20Proceedings.pdf</a
+        >
+      </p>
+      <p>
+        Hall, R., & <strong>Vogelstein, L</strong>. (2018). How did they do that? Using
+        video-elicited re-enactments to invite ensemble learning in mathematical activity. In
+        Nemirovsky, R. symposiym Video Data and the Learning Event: Four Case Studies. In
+        <em>Proceedings of the International Conference of the Learning Sciences</em>, London,
+        England, 1195-1202.
+        <a
+          href="https://repository.isls.org/bitstream/1/593/1/266.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/bitstream/1/593/1/266.pdf</a
+        >
+      </p>
+    `,
   },
   {
     id: 'gem-step',
@@ -48,6 +465,88 @@ const projectData = [
     description: '(Graduate Research Assistant 2021-2022)',
     link: 'https://embodiedplay.org/',
     type: 'previous',
+    modalHtml: /* HTML */ `
+      <h4>
+        <a href="https://embodiedplay.org/" target="_blank" rel="noopener noreferrer">GEM STEP</a>
+      </h4>
+      <p>
+        <a
+          href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1908791"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Generalized Embodied Modeling to support Science through Technology Enhanced Play (GEM
+          exploring embodied forms of computational modeling and play in an augmented reality STEP)
+          is an NSF funded DRK-12 project (PIs Drs. Noel Enyedy, Corey Brady, & Joshua Danish)</a
+        >
+        environment. I supported the design, implementation, and analysis of a three month design
+        workshop with high schoolers who designed activities that used the augmented reality
+        modeling system to teach middle schoolers about various issues related to environmental
+        sustainability.
+      </p>
+      <p>
+        Jen, T., Brady, C., & <strong>Vogelstein, L.</strong> (Under Review, Revise & Resubmit).
+        Youth as designers of embodied participatory simulations of ecosystems: Negotiating shared
+        visions of thinking, acting, and feeling for sustainability.
+        <em>Journal of Science Education & Technology.</em>
+      </p>
+      <p>
+        *en, T., Brady, C., <strong>Vogelstein, L.</strong>, & Ayalon, E. (2023). Designing for
+        feelings: Disruptive beginnings in youths' designs of mixed reality activities for
+        sustainability. In
+        <em
+          >Proceedings of the International Society of the Learning Sciences Annual Meeting 2023
+          ICLS</em
+        >, 950-953.
+        <a
+          href="https://repository.isls.org/handle/1/10367"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/10367</a
+        >
+      </p>
+      <p>
+        Brady, C., <strong>Vogelstein, L.</strong>, Jen, T., & Dim, E. (2022). The Design of
+        Embodied Participatory Simulations as a Collaborative Learning Environment. In
+        <em
+          >Proceedings of the International Society of the Learning Sciences Annual Meeting 2022
+          CSCL</em
+        >, 203-210.
+        <a
+          href="https://repository.isls.org/handle/1/8277"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/8277</a
+        >
+      </p>
+      <p>
+        Brady, C., Jen, T., <strong>Vogelstein, L.</strong>, & Dim, E. (2022). Designing with
+        Feeling: How students constructed participatory simulations for groups of young learners to
+        understand and care about sustainability in ecosystems. In
+        <em>Proceedings of the 2022 Conference on Interaction Design and Children</em>, 315-326.
+        <a
+          href="https://dl.acm.org/doi/pdf/10.1145/3501712.3529725"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://dl.acm.org/doi/pdf/10.1145/3501712.3529725</a
+        >
+      </p>
+      <p>
+        Mathayas, N., Xintian, T., Danish, J., <strong>Vogelstein, L.</strong>, & Cosic, L. (2022).
+        Building meaningful participation using embodied Mixed Reality technologies. In
+        <strong>Vogelstein, L.</strong> & Mathayas, N. symposium, Moving toward dignity-affirming
+        invitations to embodied participation in the design of learning environments. In
+        <em
+          >Proceedings of the International Society of the Learning Sciences Annual Meeting 2022
+          ICLS</em
+        >, 1739-1746.
+        <a
+          href="https://repository.isls.org/handle/1/8579"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/8579</a
+        >
+      </p>
+    `,
   },
   {
     id: 'steam-maker-pedagogies',
@@ -55,6 +554,41 @@ const projectData = [
     description: '(Graduate Research Assistant 2017-2021)',
     link: '',
     type: 'previous',
+    modalHtml: /* HTML */ `
+      <h4>STEAM Maker Pedagogies</h4>
+      <p>
+        A small ethnographic project funded by Vanderbilt University (PIs Drs. Tesha
+        Sengupta-Irving, Corey Brady, & Emily Phillips Galloway) to study artist mentors' pedagogy
+        in a public library maker space. I collected ethnographic data on the professional
+        development and pedagogical practices of the maker space facilitators. Our investigations
+        illuminated important insights on the role of moment-to-moment pedagogical interactions and
+        how assumptions informed student experiences of racialization and dignity in their learning.
+      </p>
+      <p>
+        Sengupta-Irving, T., <strong>Vogelstein, L.</strong>, Brady, C., Phillips-Galloway, E.
+        (2022). Prolepsis & telos: Interpreting pedagogy and recovering the role of imagination in
+        the mediation of youth learning.
+        <em>Journal of the Learning Sciences. DOI: 10.1080/10508406.2022.2114833</em>
+      </p>
+      <p>
+        Sengupta-Irving, T., <strong>Vogelstein, L.</strong>, Brady C., Galloway, E. P., (2020) The
+        pedagogical moves of artist mentors in a public library makerspace.
+        <em>Proceedings of the International Conference of the Learning Sciences</em>, 2020,
+        2297-2299.
+        <a href="http://repository.isls.org/handle/1/6536" target="_blank" rel="noopener noreferrer"
+          >http://repository.isls.org/handle/1/6536</a
+        >
+      </p>
+      <p>
+        Sengupta-Irving, T., & <strong>Vogelstein, L.</strong> (2018). Mentors in the making: A case
+        study of heterogeneity in meaning making at a public library makerspace. In
+        <em>Proceedings of the International Conference of the Learning Sciences</em>, London,
+        England, 1693-1694.
+        <a href="https://repository.isls.org/handle/1/807" target="_blank" rel="noopener noreferrer"
+          >https://repository.isls.org/handle/1/807</a
+        >
+      </p>
+    `,
   },
 ]
 ---
@@ -70,47 +604,7 @@ const projectData = [
   <div class="project-container">
     {
       // Build project cards
-      projectData.map((project) => {
-        const headerIsLink = project.link ? true : false
-
-        return (
-          <div class="project active" data-type={project.type}>
-            <h4>
-              {headerIsLink ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  {project.title}
-                </a>
-              ) : (
-                project.title
-              )}
-            </h4>
-            <div class="project-info">
-              <p>{project.description}</p>
-              <svg
-                data-id={project.id}
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-              >
-                <path
-                  d="M7.5 18H28.5"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M18 7.5L28.5 18L18 28.5"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-        )
-      })
+      projectData.map((project) => <ProjectCard project={project} />)
     }
 
     <div class="modal-info">
@@ -134,21 +628,8 @@ const projectData = [
   </div>
 </div>
 
-<!-- Project Styles -->
 <style>
-  svg,
-  path {
-    transition: all var(--transition-medium);
-    stroke: var(--color-black-faded);
-  }
-
-  svg {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--color-black-faded);
-  }
+  /* Project container styles */
 
   .projects {
     position: relative;
@@ -195,76 +676,11 @@ const projectData = [
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
-
-  .project {
-    display: none;
-    padding: 2rem;
-    border: 1px solid var(--color-black-faded);
-    border-radius: 1.25rem;
-    background-color: var(--color-white);
-    transition: all var(--transition-medium);
-    box-shadow: 0 0 20px var(--color-box-shadow);
-  }
-
-  .project:hover {
-    background-color: var(--color-black);
-    border: 1px solid var(--color-black);
-  }
-
-  .project.active {
-    display: block;
-  }
-
-  .project h4 {
-    margin-bottom: 1rem;
-    font-size: var(--size-lg);
-    transition: all var(--transition-medium);
-  }
-
-  .project:hover h4,
-  .project:hover p {
-    color: var(--color-white);
-  }
-
-  .project:hover a:hover,
-  .project:hover h4 a:hover {
-    color: var(--color-pink);
-  }
-
-  .project:hover .project-info svg {
-    border: 1px solid var(--color-white);
-  }
-
-  .project:hover .project-info svg path {
-    stroke: var(--color-white);
-  }
-
-  .project:hover .project-info svg:hover {
-    background-color: var(--color-white);
-    cursor: pointer;
-  }
-
-  .project:hover .project-info svg:hover path {
-    stroke: var(--color-black);
-  }
-
-  .project-info {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .project-info p {
-    color: var(--color-black-faded);
-    font-size: var(--size-md);
-    line-height: 1.8;
-    transition: all var(--transition-medium);
-  }
 </style>
 
-<!-- Modal Styles -->
 <style is:inline>
+  /* Modal styles */
+
   .modal-info {
     position: fixed;
     visibility: hidden;
@@ -315,10 +731,13 @@ const projectData = [
     cursor: pointer;
   }
 
-  .modal-info .close svg {
+  .close svg {
     width: 1.25rem;
     height: 1.25rem;
     stroke: var(--color-black);
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-black-faded);
   }
 
   .close svg:hover,
@@ -354,594 +773,21 @@ const projectData = [
   }
 </style>
 
-<script>
+<script define:vars={{ projectData }}>
   const body = document.querySelector('body')
-  const tabs = document.querySelectorAll('.tab') as NodeListOf<HTMLElement>
+  const tabs = document.querySelectorAll('.tab')
   const projects = document.querySelectorAll('.project')
-  const projectCtas = document.querySelectorAll('.project-info svg') as NodeListOf<HTMLElement>
+  const projectCtas = document.querySelectorAll('.project-info svg')
   const modalInfo = document.querySelector('.modal-info')
-  const modalHtml = document.querySelector('.modal-html') as HTMLDivElement
+  const modalHtml = document.querySelector('.modal-html')
   const modalClose = document.querySelector('.modal-info .close')
 
-  const projectInfo = [
-    {
-      id: 'choreographing-science',
-      html: /* HTML */ `
-        <h4>
-          <a
-            href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2115773&HistoricalAwards=false"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Choreographing Science</a
-          >
-        </h4>
-        <p>
-          This is an NSF funded AISL design based research project aimed at developing dance-science
-          camps for middle schoolers, scientists, and choreographers to collaboratively engage in
-          scientific inquiry that leverages choreographic modeling and agent based modeling. Our
-          primary aims are for scientists to see youths' ideas and dance-based perspectives as
-          generative for their research and for middle schoolers to feel valued in authentic
-          scientific inquiry. Our findings point to the expansive use of dance to support new ideas
-          of science concepts through robust and equitable forms of participation.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Champion, C., Wagh, A., & Appleby, L. (2024) Growing into
-          Collective Forms of Scientific Inquiry: The dignifying affirmation of timid, half-baked
-          ideas.
-          <em
-            >To be published in the proceedings of the International Society of the Learning
-            Sciences Annual Meeting 2024.</em
-          >
-        </p>
-        <p>
-          Wagh, A., <strong>Vogelstein, L.</strong>, & Champion, D. (2024). Fused Representations:
-          Linking Choreographic and Digital NetLogo Modeling through Intermodal Inquiry.
-          <em
-            >To be published in the proceedings of the International Society of the Learning
-            Sciences Annual Meeting 2024.</em
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong> (2024). Using Choreographic Lenses to Provide Evidence of
-          (Embodied) Learning: Pushing beyond word-based evidence of changes in participation. In
-          <strong>Vogelstein, L.</strong> & Woods, P. symposium, Doing Learning Sciences Research In
-          & Through the Arts.
-          <em
-            >To be published in the proceedings of the International Society of the Learning
-            Sciences Annual Meeting 2024.</em
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Burley, X., Springer, A., Champion, D., Wagh, A.,
-          Steinberg, R., & Varone, D. (2024). Leveraging co-analysis to disrupt normative citation
-          practices in interdisciplinary collaborations with artists. In Pierson, A., & Keifert, D.
-          T. symposium, Co-Research in Video Analysis: Shifts Towards Ethical Validity.
-          <em
-            >To be published in the proceedings of the International Society of the Learning
-            Sciences Annual Meeting 2024.</em
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Steinberg, R., Thomas, C., Champion, D., Wagh, A., &
-          Appleby, L. (2024). Cultivating care through choreographic forms of interaction analysis.
-          In Love, C. & Jen, T. symposium, Caring Relations Across Interaction Analysis Labs.
-          <em
-            >To be published in the proceedings of the International Society of the Learning
-            Sciences Annual Meeting 2024.</em
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Champion, D., & Wagh, A. (2022, April). Conjecture
-          Mapping Design & Theoretical Conjectures Explicitly to a Funding Audience. Paper presented
-          in symposium Conjecture Mapping: New Approaches to broadening processes of educational
-          design research at the 2022 American Education Research Association Conference San Diego,
-          CA.
-        </p>
-      `,
-    },
-    {
-      id: 'algorithmic-audits',
-      html: /* HTML */ `
-        <h4>
-          <a
-            href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2333469&HistoricalAwards=false"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Algorithmic Audits by Youth</a
-          >
-        </h4>
-        <p>
-          This NSF funded RAPID ITEST project addresses the need to support high schooler's emergent
-          understandings of the biases inherent in Artificial Intelligence (AI) and Machine Learning
-          (ML) systems as these technologies rapidly develop and influence their everyday lives. The
-          project, which includes phases of student co-design sessions, after school programming,
-          and summer computational design workshops, incorporates participatory design research to
-          expand conceptual clarity on algorithm auditing as an embodied computational literacy. The
-          aims of this project are to (1) understand students' everyday engagement with TikTok
-          filters as existing audit-like practices and AI/ML literacies and (2) explore how
-          leveraging these audit practices to design their own filters can support their
-          understandings of biases in AI/ML systems. As a postdoctoral associate on this project, my
-          research has focused on youth participants' critical understandings of how AI/ML
-          technologies (mis)represent their bodies.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Morales-Navarro, L., Kafai, Y., & Metaxa, D. (Under
-          review). Youth Auditing for Algorithmic Justice as Computational Empowerment.
-        </p>
-      `,
-    },
-    {
-      id: 'pila-cs',
-      html: /* HTML */ `
-        <h4>
-          <a href="https://www.pila-cs.org/" target="_blank" rel="noopener noreferrer">PiLa-CS</a>
-        </h4>
-        <p>
-          <a
-            href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1837446"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Participating in Literacies and Computer Science (PiLa-CS) is an NSF STEM+C (PIs Drs.
-            Christopher Hoadley, Jasmine Ma, & Laura Ascenzi-Moreno)</a
-          >
-          Research Practice Partnership between New York City schools and researchers at New York
-          University and the City University of New York to support bi/multilingual kids
-          participating in the CS for All initiative. My role in the project focused on supporting
-          and learning from teachers as they developed equity-oriented design and teaching practices
-          for integrating CS into their classrooms of bi/multilingual learners. Through co-design of
-          professional development sessions and follow up observations and interviews with teachers,
-          we explored the theoretical and design-based implications of using syncretism to bring
-          together everyday and academic ways of knowing in ways that disrupt hegemonic knowledge
-          hierarchies.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Ma, J. Y., Vogel, S., Radke, S., Hoadley, C.,
-          Ascenzi-Moreno, L., Barrales, W., Wy, J., & Wu, F. (2024). “An interesting mental
-          exercise”: Making space for teachers' syncretic pedagogical content knowledge. In Jones,
-          K., & McBride, C. symposium, Applying Syncretic Frameworks in the Learning Sciences.
-          <em
-            >To be published in the proceedings of the International Society of the Learning
-            Sciences Annual Meeting 2024.</em
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, McBride, C., Ma, J., Wilkerson, M., Vogel, S., Barrales,
-          W., Ascenzi-Moreno, L., Hoadley, C., & Gutiérrez, K. (2023). Storytelling “in theory”:
-          Re-imagining computational literacies through the lenses of syncretism and
-          translanguaging. In
-          <em
-            >Proceedings of the International Society of the Learning Sciences Annual Meeting 2023
-            ICLS, 800-807.</em
-          >
-          <a
-            href="https://repository.isls.org/handle/1/10331"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/10331</a
-          >
-        </p>
-        <p>
-          James, S., <strong>Vogelstein, L.</strong>, Ma, J., Vogel, S., Barrales, W.,
-          Ascenzi-Moreno, L., & Hoadley, C. (2023). Research as Relational: Stories of ever-present
-          learning between undergraduate research interns and project researchers. In
-          <em
-            >Proceedings of the International Society of the Learning Sciences Annual Meeting 2023
-            ICLS</em
-          >, 617-624. Nominated for best student paper award.
-          <a
-            href="https://repository.isls.org/handle/1/10306"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/10306</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Vogel, S., Ma, J. Y., Hoadley, C., Ascenzi-Moreno, L., &
-          Barrales, W. (April, 2024).
-          <em
-            >In-Service CS Teachers' & Researchers' Notions of Equity in a Professional Learning
-            Community.</em
-          >
-          To be presented at the 2024 American Education Research Association Conference
-          Philadelphia, PA.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Vogel, S., Hoadley, C., Radke, S. C., Ascenzi-Moreno, L.,
-          Ma, J. Y., Barrales, W., & James, S. (2023, April).
-          <em
-            >Moving Towards Syncretic Literacies to Validate Student Sense-Making in
-            Computing-Integrated Language Arts.</em
-          >
-          2023 American Education Research Association Conference Chicago, IL.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Vogel, S., Barrales, W., Ascenzi-Moreno, L., Hoadley, C.,
-          & Ma, J. (2022, April).
-          <em
-            >Translanguaging Towards More Expansive Computing Education: Reflections from a
-            Professional Learning Community.</em
-          >
-          2022 American Education Research Association Conference San Diego, CA.
-        </p>
-      `,
-    },
-    {
-      id: 'camps',
-      html: /* HTML */ `
-        <h4>CAMPS</h4>
-        <p>
-          Computational And Mathematics Play Spaces (CAMPS) was a design based research NSF funded
-          STEM+C study (PIs Drs. Melissa Gresalfi & Corey Brady) aimed at exploring how to
-          incorporate mathematical and computational thinking together in the context of art making.
-          As a graduate research assistant on the project, I levereged my expertise on embodiment
-          and dance to co-design dance-based math & computational activities with dancers and
-          support middle school teachers to lead these activities in a summer day-camp for middle
-          school learners.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Steinberg, R., Thomas, C., & Brady, C. (Under Review,
-          Revise & Resubmit). Interdisciplinary Collaboration in Design Research: A process of
-          composing across design, analysis, and relations. <em>Cognition & Instruction</em>.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, & Brady, C. (2019). Taking the patch perspective: A
-          Comparative analysis of a patch based participatory simulation. In
-          <em>Proceedings of the 2019 Conference on Computer Supported Collaborative Learning</em>
-          Lyon, France, 512-519.
-          <a
-            href="http://repository.isls.org/handle/1/1611"
-            target="_blank"
-            rel="noopener noreferrer"
-            >http://repository.isls.org/handle/1/1611</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Brady, C., Steinberg, R., & Thomas, C. (2021). Developing
-          computational double awareness through rule-based dance games. In
-          <strong>Vogelstein, L</strong>. & Solomon, F. symposium, Embodying, STEM: Learning at the
-          Intersection of Dance and STEM.
-          <em
-            >In Proceedings of the International Society of the Learning Sciences Annual Meeting
-            2021</em
-          >, 819-826.
-          <a
-            href="https://repository.isls.org/handle/1/7588"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/7588</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein. L.</strong>, Brady, C., Steinberg, R., Thomas, C. (2021). Flares in
-          the soup game: Improvisational collective choreography and computational expressivity. In
-          Wagh, A. & Dickies, A. symposium, Expansive Modeling: Broadening the scope of modeling in
-          K-12 education. In
-          <em
-            >Proceedings of the International Society of the Learning Sciences Annual Meeting
-            2021</em
-          >, 832-833.
-          <a
-            href="https://repository.isls.org/handle/1/7589"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/7589</a
-          >
-        </p>
-        <p>
-          Brady, C. & <strong>Vogelstein, L.</strong> (2023). Epistemic Rekeying: Epistemic tensions
-          across disciplines as opportunities for artistic response. In
-          <em
-            >Proceedings of the Annual Conference of the North American Chapter of the International
-            Group for the Psychology of Mathematics Education 2023 Volume 2</em
-          >, 301-309.
-          <a
-            href="https://www.pmena.org/pmenaproceedings/PMENA%2045%202023%20Proceedings%20Vol%202.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.pmena.org/pmenaproceedings/PMENA%2045%202023%20Proceedings%20Vol%202.pdf</a
-          >
-        </p>
-        <p>
-          Brady, C., <strong>Vogelstein, L.</strong>, Gresalfi, M., Knowe, M. (2021). Circular
-          reasoning: Shifting epistemological frames across mathematics and coding activities.
-          <em>In Proceedings of the Psychology of Mathematics Education North American Chapter</em>
-          annual meeting, Philadelphia, PA, 1182-1190.
-          <a
-            href="https://www.pmena.org/pmenaproceedings/PMENA%2043%202021%20Proceedings.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.pmena.org/pmenaproceedings/PMENA%2043%202021%20Proceedings.pdf</a
-          >
-        </p>
-        <p>
-          Brady, C., & <strong>Vogelstein, L</strong>. (2020) Patches as an expressive medium for
-          agent-based modeling and programming. <em>Proceedings of Constructionism, 2020</em>,
-          436-448.
-          <a
-            href="https://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf</a
-          >
-        </p>
-        <p>
-          Gresalfi, M., Bell, A., Brady, C., & <strong>Vogelstein, L.</strong> (2019). Same place,
-          new rules: The joint accomplishment of engagement. In Cheng, B. H. symposium, Theorizing
-          and measuring collective productive disciplinary engagement. In
-          <em>Proceedings of the 2019 Conference on Computer Supported Collaborative Learning</em>,
-          Lyon, France, 775-782.
-          <a
-            href="https://repository.isls.org/handle/1/4504"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/4504</a
-          >
-        </p>
-      `,
-    },
-    {
-      id: 'physical-research',
-      html: /* HTML */ `
-        <h4>Physical Research</h4>
-        <p>
-          A two year ethnographic study of a contemporary dance company's choreographic inquiry
-          practice they referred to as “physical research.” As the second study of my dissertation,
-          I attended rehearsals weekly over the course of two seasons of the company's work to
-          document their practice of physical research via field notes and video recordings.
-          Findings have pointed to the interactional structure of physical research as an embodied
-          and ensemble practice in which a choreographer and dances create proposals and responses
-          to each others' ideas physically as they learn together.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong> (2021).
-          <em
-            >Mathematical physical research: Mathematical agency in the practices of professional
-            dancers.</em
-          >
-          Proceedings of the International Society of the Learning Sciences Annual Meeting 2021 (pp.
-          299-306). Best student paper nominee for Learning Sciences.
-          <a
-            href="https://drive.google.com/file/d/1NuYhdOKDgpp_omNH6qXKYmAh2G5_c9iv/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://drive.google.com/file/d/1NuYhdOKDgpp_omNH6qXKYmAh2G5_c9iv/view</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong> (2020) Physical research: Professional dancers exploring
-          collective possibilities in a solidifying substrate.
-          <em>Proceedings of the International Conference of the Learning Sciences</em>, 2020,
-          737-739.
-          <a
-            href="https://repository.isls.org/handle/1/6741"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/6741</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong> & Hall, R. (2020). The push that never made sense to me:
-          the substrate of dancers' professional intrinsic and extrinsic vision. In Keifert, D. T. &
-          Enyedy, N. symposium, Analytical designs: Goodwin's substrates as a tool for studying
-          learning. In
-          <em>proceedings of the International Conference of the Learning Sciences</em>, 2020,
-          1471-1478.
-          <a
-            href="https://repository.isls.org/handle/1/6352"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/6352</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L</strong> & Radke, S. (2020). Making use of video for other purposes:
-          When participants use video data as part of their practice. In Hennessey Elliott, C. &
-          Radke, S. symposium, Whose video?: Surveying implications for participants engagement in
-          video recording practices in ethnographic research. In
-          <em>proceedings of the International Conference of the Learning Sciences</em>, 2020,
-          414-421.
-          <a
-            href="https://repository.isls.org/handle/1/6666"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/6666</a
-          >
-        </p>
-      `,
-    },
-    {
-      id: 'ensemble-math',
-      html: /* HTML */ `
-        <h4>Ensemble Math</h4>
-        <p>
-          The first study in my dissertation explored how reenacting ensemble choreography could be
-          the grounds for expansive mathematical activity. Designed as a Vygotskian double
-          stimulation interview, participants in small groups viewed a mathematically salient piece
-          of
-          <a
-            href="https://www.youtube.com/watch?v=N_qXm9HY9Ro"
-            target="_blank"
-            rel="noopener noreferrer"
-            >ensemble choreography from the Rio Olympic opening ceremony</a
-          >
-          and then were given the task of reenacting certain movement phrases (e.g., folding a
-          similar square prop into a triangle). I interviewed four quartets for this project, two
-          quartets of middle school youth, one quartet of scientists who became STEM educators, one
-          quartet of professional dancers.
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Brady, C., & Hall, R. (2019). Reenacting mathematical
-          concepts found in large-scale dance performance can provide both material and method for
-          ensemble learning. <em>ZDM Mathematics Education</em> 51(2).
-          <a
-            href="https://link.springer.com/article/10.1007/s11858-019-01030-2"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://link.springer.com/article/10.1007/s11858-019-01030-2</a
-          >
-        </p>
-        <p>
-          <strong>Vogelstein, L.</strong>, Brady, C., & Hall, R. (2017). Putting our bodies on the
-          line: Mathematizing ensemble performances. In Proceedings of the
-          <em>Psychology of Mathematics Education North American Chapter</em> annual meeting,
-          Indianapolis, IA, 383-386.
-          <a
-            href="http://www.pmena.org/pmenaproceedings/PMENA%2039%202017%20Proceedings.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >http://www.pmena.org/pmenaproceedings/PMENA%2039%202017%20Proceedings.pdf</a
-          >
-        </p>
-        <p>
-          Hall, R., & <strong>Vogelstein, L</strong>. (2018). How did they do that? Using
-          video-elicited re-enactments to invite ensemble learning in mathematical activity. In
-          Nemirovsky, R. symposiym Video Data and the Learning Event: Four Case Studies. In
-          <em>Proceedings of the International Conference of the Learning Sciences</em>, London,
-          England, 1195-1202.
-          <a
-            href="https://repository.isls.org/bitstream/1/593/1/266.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/bitstream/1/593/1/266.pdf</a
-          >
-        </p>
-      `,
-    },
-    {
-      id: 'gem-step',
-      html: /* HTML */ `
-        <h4>
-          <a href="https://embodiedplay.org/" target="_blank" rel="noopener noreferrer">GEM STEP</a>
-        </h4>
-        <p>
-          <a
-            href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1908791"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Generalized Embodied Modeling to support Science through Technology Enhanced Play (GEM
-            exploring embodied forms of computational modeling and play in an augmented reality
-            STEP) is an NSF funded DRK-12 project (PIs Drs. Noel Enyedy, Corey Brady, & Joshua
-            Danish)</a
-          >
-          environment. I supported the design, implementation, and analysis of a three month design
-          workshop with high schoolers who designed activities that used the augmented reality
-          modeling system to teach middle schoolers about various issues related to environmental
-          sustainability.
-        </p>
-        <p>
-          Jen, T., Brady, C., & <strong>Vogelstein, L.</strong> (Under Review, Revise & Resubmit).
-          Youth as designers of embodied participatory simulations of ecosystems: Negotiating shared
-          visions of thinking, acting, and feeling for sustainability.
-          <em>Journal of Science Education & Technology.</em>
-        </p>
-        <p>
-          *en, T., Brady, C., <strong>Vogelstein, L.</strong>, & Ayalon, E. (2023). Designing for
-          feelings: Disruptive beginnings in youths' designs of mixed reality activities for
-          sustainability. In
-          <em
-            >Proceedings of the International Society of the Learning Sciences Annual Meeting 2023
-            ICLS</em
-          >, 950-953.
-          <a
-            href="https://repository.isls.org/handle/1/10367"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/10367</a
-          >
-        </p>
-        <p>
-          Brady, C., <strong>Vogelstein, L.</strong>, Jen, T., & Dim, E. (2022). The Design of
-          Embodied Participatory Simulations as a Collaborative Learning Environment. In
-          <em
-            >Proceedings of the International Society of the Learning Sciences Annual Meeting 2022
-            CSCL</em
-          >, 203-210.
-          <a
-            href="https://repository.isls.org/handle/1/8277"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/8277</a
-          >
-        </p>
-        <p>
-          Brady, C., Jen, T., <strong>Vogelstein, L.</strong>, & Dim, E. (2022). Designing with
-          Feeling: How students constructed participatory simulations for groups of young learners
-          to understand and care about sustainability in ecosystems. In
-          <em>Proceedings of the 2022 Conference on Interaction Design and Children</em>, 315-326.
-          <a
-            href="https://dl.acm.org/doi/pdf/10.1145/3501712.3529725"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://dl.acm.org/doi/pdf/10.1145/3501712.3529725</a
-          >
-        </p>
-        <p>
-          Mathayas, N., Xintian, T., Danish, J., <strong>Vogelstein, L.</strong>, & Cosic, L.
-          (2022). Building meaningful participation using embodied Mixed Reality technologies. In
-          <strong>Vogelstein, L.</strong> & Mathayas, N. symposium, Moving toward dignity-affirming
-          invitations to embodied participation in the design of learning environments. In
-          <em
-            >Proceedings of the International Society of the Learning Sciences Annual Meeting 2022
-            ICLS</em
-          >, 1739-1746.
-          <a
-            href="https://repository.isls.org/handle/1/8579"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/8579</a
-          >
-        </p>
-      `,
-    },
-    {
-      id: 'steam-maker-pedagogies',
-      html: /* HTML */ `
-        <h4>STEAM Maker Pedagogies</h4>
-        <p>
-          A small ethnographic project funded by Vanderbilt University (PIs Drs. Tesha
-          Sengupta-Irving, Corey Brady, & Emily Phillips Galloway) to study artist mentors' pedagogy
-          in a public library maker space. I collected ethnographic data on the professional
-          development and pedagogical practices of the maker space facilitators. Our investigations
-          illuminated important insights on the role of moment-to-moment pedagogical interactions
-          and how assumptions informed student experiences of racialization and dignity in their
-          learning.
-        </p>
-        <p>
-          Sengupta-Irving, T., <strong>Vogelstein, L.</strong>, Brady, C., Phillips-Galloway, E.
-          (2022). Prolepsis & telos: Interpreting pedagogy and recovering the role of imagination in
-          the mediation of youth learning.
-          <em>Journal of the Learning Sciences. DOI: 10.1080/10508406.2022.2114833</em>
-        </p>
-        <p>
-          Sengupta-Irving, T., <strong>Vogelstein, L.</strong>, Brady C., Galloway, E. P., (2020)
-          The pedagogical moves of artist mentors in a public library makerspace.
-          <em>Proceedings of the International Conference of the Learning Sciences</em>, 2020,
-          2297-2299.
-          <a
-            href="http://repository.isls.org/handle/1/6536"
-            target="_blank"
-            rel="noopener noreferrer"
-            >http://repository.isls.org/handle/1/6536</a
-          >
-        </p>
-        <p>
-          Sengupta-Irving, T., & <strong>Vogelstein, L.</strong> (2018). Mentors in the making: A
-          case study of heterogeneity in meaning making at a public library makerspace. In
-          <em>Proceedings of the International Conference of the Learning Sciences</em>, London,
-          England, 1693-1694.
-          <a
-            href="https://repository.isls.org/handle/1/807"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://repository.isls.org/handle/1/807</a
-          >
-        </p>
-      `,
-    },
-  ]
-
-  function handleTabClick(e: MouseEvent) {
-    const eventTarget = e.target as HTMLElement
+  /**
+   * On tab click, show/hide projects based on tab type
+   * @param {Event} e
+   */
+  function handleTabClick(e) {
+    const eventTarget = e.target
     const tabName = eventTarget.getAttribute('data-type')
 
     tabs.forEach((tab) => tab.classList.remove('active'))
@@ -958,10 +804,13 @@ const projectData = [
     })
   }
 
-  function handleProjectClick(e: MouseEvent) {
-    const eventTarget = e.target as HTMLElement
-    const projectId = eventTarget.getAttribute('data-id')
-    const html = projectInfo.find((info) => info.id === projectId)?.html
+  /**
+   * On project click, show modal with project details
+   * @param {Event} e
+   */
+  function handleProjectClick(e) {
+    const projectId = e.target.getAttribute('data-id')
+    const html = projectData.find((project) => project.id === projectId)?.modalHtml
 
     if (!html) return
 
@@ -971,11 +820,15 @@ const projectData = [
     body?.setAttribute('data-overlay-displayed', 'true')
   }
 
+  /**
+   * Close project modal
+   */
   function handleCloseProject() {
     modalInfo?.classList.remove('active')
     body?.setAttribute('data-overlay-displayed', 'false')
   }
 
+  // Event Listeners
   tabs.forEach((tab) => tab.addEventListener('click', handleTabClick))
   projectCtas.forEach((cta) => cta.addEventListener('click', handleProjectClick))
   modalClose?.addEventListener('click', handleCloseProject)

@@ -1,3 +1,4 @@
+import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
@@ -5,4 +6,5 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'always',
   },
+  integrations: [icon()],
 })

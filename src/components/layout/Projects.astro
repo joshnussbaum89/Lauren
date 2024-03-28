@@ -609,15 +609,17 @@ const projectData = [
 
     <div class="modal-info">
       <div class="close">
+        <!-- TODO: why isn't this working? -->
+        <!-- <Icon name="close" /> -->
         <svg
           width="159"
           height="184"
           viewBox="0 0 159 184"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          ><path d="M15 15L143.269 168.451" stroke-width="20" stroke-linecap="round"></path><path
+          ><path d="M15 15L143.269 168.451" stroke-width="10" stroke-linecap="round"></path><path
             d="M15 168.455L143.263 15"
-            stroke-width="20"
+            stroke-width="10"
             stroke-linecap="round"></path></svg
         >
       </div>
@@ -697,7 +699,7 @@ const projectData = [
     padding: 2rem;
     border: 1px solid var(--color-black-faded);
     border-radius: 1.25rem;
-    box-shadow: 0 0 20px var(--color-box-shadow);
+    box-shadow: var(--box-shadow-normal);
   }
 
   @media (min-width: 768px) {
@@ -777,7 +779,7 @@ const projectData = [
   const body = document.querySelector('body')
   const tabs = document.querySelectorAll('.tab')
   const projects = document.querySelectorAll('.project')
-  const projectCtas = document.querySelectorAll('.project-info svg')
+  const projectCtas = document.querySelectorAll('.project-info svg[data-id]')
   const modalInfo = document.querySelector('.modal-info')
   const modalHtml = document.querySelector('.modal-html')
   const modalClose = document.querySelector('.modal-info .close')

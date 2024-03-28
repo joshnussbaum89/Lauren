@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+import { Picture } from 'astro:assets'
 import Navigation from './Navigation.astro'
 import curvedName from '../../assets/curved-name.svg'
 import headshot from '../../assets/headshot.png'
@@ -10,17 +10,19 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
   <Navigation />
   <div class="content">
     <div class="signature">
-      <Image
+      <Picture
         src={curvedName}
-        width={curvedName.width}
-        height={curvedName.height}
+        formats={['avif', 'webp']}
         alt="Curved name text"
+        loading="eager"
+        class="image-one"
       />
-      <Image
+      <Picture
         src={headshot}
-        width={headshot.width}
-        height={headshot.height}
+        formats={['avif', 'webp']}
         alt="Lauren Vogelstein Headshot"
+        loading="eager"
+        class="image-two"
       />
     </div>
     <div class="info">
@@ -47,7 +49,7 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 <style>
   header {
     position: relative;
-    background: var(--gradient-blue-purple);
+    background: var(--color-blue);
   }
 
   p {
@@ -82,28 +84,23 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
     align-items: center;
   }
 
-  .signature img {
-    height: auto;
-  }
-
-  .signature img:nth-child(1) {
+  .signature .image-one {
     width: 90%;
     max-width: 450px;
   }
 
   @media (max-height: 700px) {
-    .signature img:nth-child(1) {
+    .signature .image-one {
       max-width: 39vh;
     }
   }
 
-  .signature img:nth-child(2) {
-    width: 75%;
+  .signature .image-two {
     max-width: 300px;
   }
 
   @media (max-height: 700px) {
-    .signature img:nth-child(2) {
+    .signature .image-two {
       max-width: 39vh;
     }
   }

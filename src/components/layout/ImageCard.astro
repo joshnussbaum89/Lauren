@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+import { Picture } from 'astro:assets'
 
 export interface Props {
   title?: string
@@ -24,7 +24,7 @@ const { title, theme, image, alt } = Astro.props
   ]}
 >
   <p>{title}</p>
-  <Image src={image} width={image.width} height={image.height} alt={alt} />
+  <Picture src={image} formats={['avif', 'webp']} alt={alt} />
 </div>
 
 <style>
@@ -38,7 +38,7 @@ const { title, theme, image, alt } = Astro.props
     width: 100%;
     height: clamp(200px, 50vw, 275px);
     border-radius: calc(1.25rem - 1px);
-    box-shadow: 2px 2px 8px var(--color-box-shadow);
+    box-shadow: var(--box-shadow-normal);
   }
 
   .green {
@@ -52,9 +52,6 @@ const { title, theme, image, alt } = Astro.props
   }
   .purple {
     background-color: var(--color-purple-transparent);
-  }
-  .gradient {
-    background: var(--gradient-blue-purple);
   }
 
   .card p {
@@ -84,5 +81,6 @@ const { title, theme, image, alt } = Astro.props
     left: 50%;
     max-width: clamp(200px, 50vw, 275px);
     transform: translateX(-50%);
+    filter: drop-shadow(var(--box-shadow-normal));
   }
 </style>

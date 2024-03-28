@@ -49,11 +49,6 @@
   --color-purple: var(--color-blue); 
   --color-blue: #0b1c34; */
 
-  --gradient-blue-purple: linear-gradient(-45deg, var(--color-blue) 25%, var(--color-purple));
-
-  /* TODO: should background be a gradient? */
-  /* --gradient-blue-purple: var(--color-blue); */
-
   --size-sm: 0.875rem;
   --size-base: 1rem;
   --size-md: 1.25rem;
@@ -68,6 +63,8 @@
   --transition-medium: 0.4s ease-in-out;
   --transition-long: 1s ease-in-out;
   --transition-natural: cubic-bezier(0.34, -0.26, 0.28, 1.25);
+
+  --box-shadow-normal: 0.25rem 0.25rem 0.5rem var(--color-box-shadow);
 }
 
 html,
@@ -171,6 +168,12 @@ a:hover {
   color: var(--color-pink);
 }
 
+img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
 button {
   font-family: var(--font-cooper-bold);
 }
@@ -196,6 +199,7 @@ button {
   background: var(--color-light-pink);
   border-radius: 3rem;
   transition: all var(--transition-medium);
+  box-shadow: var(--box-shadow-normal);
 }
 
 .site-cta:hover {

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "astro": "^4.5.9",
+    "astro-icon": "^1.1.0",
     "autoprefixer": "^10.4.19"
   }
 }

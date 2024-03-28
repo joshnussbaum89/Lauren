@@ -17,7 +17,7 @@ import currentlyImage from '../../assets/currently.png'
   </div>
 
   <div class="post" data-category="childhood">
-    <ImageCard title="Childhood" image={childhoodImage} theme="gradient" alt="Childhood" />
+    <ImageCard title="Childhood" image={childhoodImage} theme="blue" alt="Childhood" />
     <p>
       I began dancing at a young age and also became enamored with counting and pattern making as
       well. I always felt challenged and compelled by questions I explored in dance and STEM spaces
@@ -28,7 +28,7 @@ import currentlyImage from '../../assets/currently.png'
     <ImageCard
       title="College"
       image={collegeImage}
-      theme="gradient"
+      theme="blue"
       alt="Lauren dancing during her college years"
     />
     <p>
@@ -44,7 +44,7 @@ import currentlyImage from '../../assets/currently.png'
     <ImageCard
       title="Teaching"
       image={teachingImage}
-      theme="gradient"
+      theme="blue"
       alt="Lauren wearing a GoPro camera during her dissertation research"
     />
     <p>
@@ -59,7 +59,7 @@ import currentlyImage from '../../assets/currently.png'
     <ImageCard
       title="Graduate School"
       image={graduateSchoolImage}
-      theme="gradient"
+      theme="blue"
       alt="Lauren and her professors at Northwestern University"
     />
     <p>
@@ -78,7 +78,7 @@ import currentlyImage from '../../assets/currently.png'
     <ImageCard
       title="Currently"
       image={currentlyImage}
-      theme="gradient"
+      theme="blue"
       alt="Lauren and her postdoctoral fellows at NYU"
     />
     <p>
@@ -144,6 +144,7 @@ import currentlyImage from '../../assets/currently.png'
   .categories span.active {
     color: var(--color-white);
     background-color: var(--color-light-pink);
+    box-shadow: var(--box-shadow-normal);
   }
 
   .post {

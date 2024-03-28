@@ -21,7 +21,7 @@ const { title, imageUrl, isArrow, description } = Astro.props
 
 <style>
   .divider {
-    scroll-margin-top: 112px;
+    scroll-margin-top: 111px;
     position: relative;
     z-index: -1;
     min-height: 50vh;
@@ -57,13 +57,13 @@ const { title, imageUrl, isArrow, description } = Astro.props
 
   h2 {
     text-shadow: 2px 2px 0 var(--color-black);
+    color: var(--color-white);
   }
 
   p {
     max-width: 700px;
     padding: 1rem;
     font-size: var(--size-md);
-    line-height: 1.8;
     text-align: center;
     text-shadow: 1px 1px 0 var(--color-black);
   }
@@ -71,7 +71,6 @@ const { title, imageUrl, isArrow, description } = Astro.props
   @media (min-width: 768px) {
     p {
       font-size: var(--size-lg);
-      line-height: 2;
     }
   }
 </style>

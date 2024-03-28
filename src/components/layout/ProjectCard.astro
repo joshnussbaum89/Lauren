@@ -31,99 +31,98 @@ const { project } = Astro.props
     <p>{project.description}</p>
     <Icon name="arrow-right" data-id={project.id} />
   </div>
-
-  <style>
-    .project {
-      display: none;
-      padding: 2rem;
-      border: 1px solid var(--color-black-faded);
-      border-radius: 1.25rem;
-      background-color: var(--color-white);
-      transition: all var(--transition-medium);
-      box-shadow: var(--box-shadow-normal);
-    }
-
-    .project:hover {
-      background-color: var(--color-black);
-      border: 1px solid var(--color-black);
-    }
-
-    .project.active {
-      display: block;
-    }
-
-    .project > [data-icon] {
-      width: 5rem;
-      height: 5rem;
-      margin-bottom: 1rem;
-      transition: all var(--transition-medium);
-    }
-
-    .project:hover > [data-icon] {
-      color: var(--color-white);
-    }
-
-    .project h4 {
-      margin-bottom: 1rem;
-      font-size: var(--size-lg);
-      transition: all var(--transition-medium);
-    }
-
-    .project:hover h4,
-    .project:hover p {
-      color: var(--color-white);
-    }
-
-    .project:hover a:hover,
-    .project:hover h4 a:hover {
-      color: var(--color-pink);
-    }
-
-    .project:hover .project-info [data-icon='arrow-right'] {
-      border: 1px solid var(--color-white);
-      stroke: var(--color-white);
-    }
-
-    .project:hover .project-info [data-icon='arrow-right'] path {
-      stroke: var(--color-white);
-    }
-
-    .project:hover .project-info [data-icon='arrow-right']:hover {
-      background-color: var(--color-white);
-      stroke: var(--color-black);
-      cursor: pointer;
-    }
-
-    .project:hover .project-info [data-icon='arrow-right']:hover path {
-      stroke: var(--color-black);
-    }
-
-    .project-info {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .project-info p {
-      color: var(--color-black-faded);
-      font-size: var(--size-md);
-      line-height: 1.8;
-      transition: all var(--transition-medium);
-    }
-
-    .project-info [data-icon='arrow-right'],
-    .project-info path {
-      transition: all var(--transition-medium);
-      stroke: var(--color-black-faded);
-    }
-
-    .project-info [data-icon='arrow-right'] {
-      width: 2rem;
-      height: 2rem;
-      padding: 0.5rem;
-      border-radius: 50%;
-      border: 1px solid var(--color-black-faded);
-    }
-  </style>
 </div>
+
+<style>
+  .project {
+    display: none;
+    padding: 2rem;
+    border: 1px solid var(--color-black);
+    border-radius: 1.25rem;
+    background-color: var(--color-white);
+    transition: all var(--transition-medium);
+    box-shadow: var(--box-shadow-normal);
+  }
+
+  .project:hover {
+    background-color: var(--color-black);
+    border: 1px solid var(--color-black);
+  }
+
+  .project.active {
+    display: block;
+  }
+
+  .project > [data-icon] {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    transition: all var(--transition-medium);
+  }
+
+  .project:hover > [data-icon] {
+    color: var(--color-white);
+  }
+
+  .project h4 {
+    margin-bottom: 1rem;
+    font-size: var(--size-lg);
+    transition: all var(--transition-medium);
+  }
+
+  .project:hover h4,
+  .project:hover p {
+    color: var(--color-white);
+  }
+
+  .project:hover a:hover,
+  .project:hover h4 a:hover {
+    color: var(--color-pink);
+  }
+
+  .project:hover .project-info [data-icon='arrow-right'] {
+    border: 1px solid var(--color-white);
+    stroke: var(--color-white);
+  }
+
+  .project:hover .project-info [data-icon='arrow-right'] path {
+    stroke: var(--color-white);
+  }
+
+  .project:hover .project-info [data-icon='arrow-right']:hover {
+    background-color: var(--color-white);
+    stroke: var(--color-black);
+    cursor: pointer;
+  }
+
+  .project:hover .project-info [data-icon='arrow-right']:hover path {
+    stroke: var(--color-black);
+  }
+
+  .project-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .project-info p {
+    font-size: var(--size-md);
+    transition: all var(--transition-medium);
+  }
+
+  .project-info [data-icon='arrow-right'],
+  .project-info path {
+    transition: all var(--transition-medium);
+    stroke: var(--color-black);
+  }
+
+  .project-info [data-icon='arrow-right'] {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-black);
+  }
+</style>

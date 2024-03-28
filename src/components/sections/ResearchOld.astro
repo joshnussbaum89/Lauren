@@ -135,10 +135,12 @@ import Projects from '../layout/Projects.astro'
     align-items: center;
     width: clamp(0px, 35vw, 250px);
     height: clamp(0px, 35vw, 250px);
-    color: var(--color-black-faded);
-    border: 1px solid var(--color-black-faded);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
     border-radius: 50%;
-    transition: background-color var(--transition-normal), color var(--transition-normal);
+    transition:
+      background-color var(--transition-normal),
+      color var(--transition-normal);
     cursor: pointer;
   }
 
@@ -213,7 +215,7 @@ import Projects from '../layout/Projects.astro'
       position: absolute;
       width: 2px;
       height: 20%;
-      background-color: var(--color-black-faded);
+      background-color: var(--color-black);
       border-radius: 10px;
       opacity: 0;
       transition: opacity var(--transition-normal);
@@ -258,7 +260,7 @@ import Projects from '../layout/Projects.astro'
   .circle-modal.mobile.active {
     opacity: 1;
     transform: translate(0) scale(1);
-    border-bottom: 2px solid var(--color-black-faded);
+    border-bottom: 2px solid var(--color-black);
   }
 
   .circle-modal p,
@@ -280,8 +282,8 @@ import Projects from '../layout/Projects.astro'
       width: 20vw;
       opacity: 0;
       visibility: hidden;
-      color: var(--color-black-faded);
-      border: 2px solid var(--color-black-faded);
+      color: var(--color-black);
+      border: 2px solid var(--color-black);
       border-radius: 10px;
       transform: translateY(4px);
     }

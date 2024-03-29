@@ -35,7 +35,6 @@
   --color-light-pink: #ff5c97;
   --color-light-pink-transparent: #ff5c9850;
   --color-purple: #848dad;
-  --color-light-purple: #b8c2d7;
   --color-purple-transparent: #848dad50;
   --color-blue: #5b7eae;
   --color-box-shadow: #0000001a;
@@ -58,8 +57,7 @@
   --size-section-header: clamp(2rem, 5vw, 4rem);
   --size-subsection-header: clamp(1.5rem, 5vw, 3rem);
 
-  --transition-normal: 0.25s ease-in-out;
-  --transition-medium: 0.4s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
   --transition-long: 1s ease-in-out;
   --transition-natural: cubic-bezier(0.34, -0.26, 0.28, 1.25);
 
@@ -75,6 +73,10 @@ body {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  /* Scrollbar */
+  scrollbar-color: var(--color-light-pink) var(--color-white);
+  scrollbar-width: thin;
 }
 
 body {
@@ -179,7 +181,9 @@ img {
 }
 
 button {
-  font-family: var(--font-cooper-bold);
+  font-family: var(--font-cooper-light);
+  font-size: var(--size-base);
+  cursor: pointer;
 }
 
 .site-section {
@@ -202,7 +206,7 @@ button {
   color: var(--color-white);
   background: var(--color-light-pink);
   border-radius: 3rem;
-  transition: all var(--transition-medium);
+  transition: all var(--transition-normal);
   box-shadow: var(--box-shadow-normal);
 }
 

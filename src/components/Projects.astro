@@ -608,7 +608,7 @@ const projectData = [
     }
 
     <div class="modal-info">
-      <div class="close">
+      <button class="close">
         <!-- TODO: why isn't this working? -->
         <!-- <Icon name="close" /> -->
         <svg
@@ -622,7 +622,7 @@ const projectData = [
             stroke-width="10"
             stroke-linecap="round"></path></svg
         >
-      </div>
+      </button>
       <div class="modal-html">
         <!-- Modal content goes here -->
       </div>
@@ -651,7 +651,7 @@ const projectData = [
   .tab {
     margin-right: 1rem;
     font-size: var(--size-lg);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
     cursor: pointer;
   }
 
@@ -693,7 +693,7 @@ const projectData = [
     max-height: 90%;
     overflow: auto;
     transform: translate(0, -45%);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
     background-color: var(--color-white);
     padding: 2rem;
     border: 1px solid var(--color-black);
@@ -725,26 +725,29 @@ const projectData = [
 
   .close {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  .close svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    stroke: var(--color-black);
-    padding: 0.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0.75rem;
     border: 1px solid var(--color-black);
     border-radius: 50%;
   }
 
-  .close svg:hover,
-  .close svg:hover path {
-    stroke: var(--color-white);
+  .close:hover {
     background-color: var(--color-black);
+  }
+
+  .close svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: var(--color-black);
+  }
+
+  .close:hover path {
+    stroke: var(--color-white);
   }
 
   .modal-html {
@@ -774,7 +777,7 @@ const projectData = [
   const body = document.querySelector('body')
   const tabs = document.querySelectorAll('.tab')
   const projects = document.querySelectorAll('.project')
-  const projectCtas = document.querySelectorAll('.project-info svg[data-id]')
+  const projectCtas = document.querySelectorAll('.project-info button[data-id]')
   const modalInfo = document.querySelector('.modal-info')
   const modalHtml = document.querySelector('.modal-html')
   const modalClose = document.querySelector('.modal-info .close')
@@ -824,6 +827,13 @@ const projectData = [
     modalInfo?.classList.remove('active')
     body?.setAttribute('data-overlay-displayed', 'false')
   }
+
+  // Accessibility
+  body?.addEventListener('keyup', (event) => {
+    if (event.code === 'Escape') {
+      handleCloseProject()
+    }
+  })
 
   // Event Listeners
   tabs.forEach((tab) => tab.addEventListener('click', handleTabClick))

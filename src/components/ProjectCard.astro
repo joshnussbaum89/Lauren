@@ -29,7 +29,9 @@ const { project } = Astro.props
   </h4>
   <div class="project-info">
     <p>{project.description}</p>
-    <Icon name="arrow-right" data-id={project.id} />
+    <button data-id={project.id}>
+      <Icon name="arrow-right" />
+    </button>
   </div>
 </div>
 
@@ -40,7 +42,7 @@ const { project } = Astro.props
     border: 1px solid var(--color-black);
     border-radius: 1.25rem;
     background-color: var(--color-white);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
     box-shadow: var(--box-shadow-normal);
   }
 
@@ -58,7 +60,7 @@ const { project } = Astro.props
     height: 5rem;
     margin-bottom: 1rem;
     color: var(--color-black);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
   }
 
   .project:hover > [data-icon] {
@@ -68,7 +70,7 @@ const { project } = Astro.props
   .project h4 {
     margin-bottom: 1rem;
     font-size: var(--size-lg);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
   }
 
   .project:hover h4,
@@ -81,23 +83,37 @@ const { project } = Astro.props
     color: var(--color-pink);
   }
 
-  .project:hover .project-info [data-icon='arrow-right'] {
-    border: 1px solid var(--color-white);
-    stroke: var(--color-white);
+  .project:hover button {
+    background-color: var(--color-black);
+    border-color: var(--color-white);
   }
 
-  .project:hover .project-info [data-icon='arrow-right'] path {
+  .project:hover button [data-icon='arrow-right'] {
     stroke: var(--color-white);
+    user-select: none;
   }
 
-  .project:hover .project-info [data-icon='arrow-right']:hover {
+  .project button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--color-black);
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: all var(--transition-normal);
+  }
+
+  .project button:hover {
     background-color: var(--color-white);
-    stroke: var(--color-black);
-    cursor: pointer;
   }
 
-  .project:hover .project-info [data-icon='arrow-right']:hover path {
+  .project button:hover [data-icon='arrow-right'] {
     stroke: var(--color-black);
+  }
+
+  .project button > * {
+    pointer-events: none;
   }
 
   .project-info {
@@ -109,20 +125,17 @@ const { project } = Astro.props
 
   .project-info p {
     font-size: var(--size-md);
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
   }
 
   .project-info [data-icon='arrow-right'],
   .project-info path {
-    transition: all var(--transition-medium);
+    transition: all var(--transition-normal);
     stroke: var(--color-black);
   }
 
   .project-info [data-icon='arrow-right'] {
     width: 2rem;
     height: 2rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--color-black);
   }
 </style>

@@ -35,11 +35,11 @@ import { Icon } from 'astro-icon/components'
 
     <!-- Mobile -->
     <div class="mobile-nav">
-      <div id="hamburger" class="hamburger">
+      <button id="hamburger" class="hamburger">
         <div class="top"></div>
         <div class="middle"></div>
         <div class="bottom"></div>
-      </div>
+      </button>
       <div class="mobile-nav-overlay">
         <ul class="mobile-nav-items">
           <li><a href="/#about">About</a></li>
@@ -185,6 +185,8 @@ import { Icon } from 'astro-icon/components'
     width: 2rem;
     height: 2rem;
     z-index: 2;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
   }
 
@@ -217,8 +219,9 @@ import { Icon } from 'astro-icon/components'
   }
 
   .hamburger.active .middle {
-    transform: translateX(-50px);
+    visibility: hidden;
     opacity: 0;
+    transform: translateX(-50px);
   }
 
   .hamburger.active .bottom {
@@ -286,6 +289,7 @@ import { Icon } from 'astro-icon/components'
   const mobileNavItems = document.querySelectorAll('.mobile-nav-overlay li')
   let overlayDisplayed = false
 
+  // Handle mobile navigation display
   function handleMobileNavigationOnClick() {
     overlayDisplayed = !overlayDisplayed
     body?.setAttribute('data-overlay-displayed', `${overlayDisplayed}`)
@@ -308,6 +312,14 @@ import { Icon } from 'astro-icon/components'
     }
   }
 
+  // Accessibility
+  body?.addEventListener('keyup', (event) => {
+    if (event.code === 'Escape' && overlayDisplayed) {
+      handleMobileNavigationOnClick()
+    }
+  })
+
+  // Event listeners
   window.addEventListener('scroll', handleNavigationOnScroll)
   window.addEventListener('resize', handleMobileNavigationOnResize)
   hamburger?.addEventListener('click', handleMobileNavigationOnClick)

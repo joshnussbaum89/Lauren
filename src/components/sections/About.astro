@@ -1,5 +1,5 @@
 ---
-import ImageCard from '../layout/ImageCard.astro'
+import ImageCard from '../ImageCard.astro'
 import childhoodImage from '../../assets/childhood.png'
 import collegeImage from '../../assets/college.png'
 import teachingImage from '../../assets/teaching.png'
@@ -9,11 +9,11 @@ import currentlyImage from '../../assets/currently.png'
 
 <section class="about site-section">
   <div class="categories">
-    <span data-category="childhood">Childhood</span>
-    <span data-category="college">College</span>
-    <span data-category="teaching">Teaching</span>
-    <span data-category="graduate-school">Graduate School</span>
-    <span class="active" data-category="currently">Currently</span>
+    <button data-category="childhood">Childhood</button>
+    <button data-category="college">College</button>
+    <button data-category="teaching">Teaching</button>
+    <button data-category="graduate-school">Graduate School</button>
+    <button class="active" data-category="currently">Currently</button>
   </div>
 
   <div class="post" data-category="childhood">
@@ -136,23 +136,23 @@ import currentlyImage from '../../assets/currently.png'
     }
   }
 
-  .categories span {
+  .categories button {
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 600;
     border-radius: 0.5rem;
-    color: var(--color-black);
     background-color: var(--color-grey);
-    transition: all var(--transition-medium);
+    font-weight: 600;
+    border: none;
+    transition: all var(--transition-normal);
     cursor: pointer;
   }
 
-  .categories span:hover {
+  .categories button:hover {
     background-color: var(--color-grey-dark);
   }
 
-  .categories span.active {
+  .categories button.active {
     color: var(--color-white);
     background-color: var(--color-light-pink);
     box-shadow: var(--box-shadow-normal);
@@ -162,7 +162,7 @@ import currentlyImage from '../../assets/currently.png'
     visibility: hidden;
     height: 0;
     opacity: 0;
-    transition: opacity var(--transition-medium);
+    transition: opacity var(--transition-normal);
   }
 
   .post.active {
@@ -182,7 +182,7 @@ import currentlyImage from '../../assets/currently.png'
 </style>
 
 <script>
-  const categories = document.querySelectorAll('.categories span')
+  const categories = document.querySelectorAll('.categories button')
   const posts = document.querySelectorAll('.post')
 
   categories.forEach((category) => {

@@ -17,7 +17,7 @@ import { Icon } from 'astro-icon/components'
     <ul class="desktop-icons">
       <li><a href="/files/lauren-vogelstein-cv.pdf" aria-label="CV" download>CV</a></li>
       <li>
-        <a href="mailto:lev226@nyu.edu" aria-label="Email">
+        <a href="mailto:laurenvo@upenn.edu" aria-label="Email">
           <Icon name="email" />
           <li>
             <a
@@ -53,7 +53,7 @@ import { Icon } from 'astro-icon/components'
             <a href="/files/lauren-vogelstein-cv.pdf" aria-label="CV" download="">CV</a>
           </li>
           <li>
-            <a href="mailto:lev226@nyu.edu" aria-label="Email">
+            <a href="mailto:laurenvo@upenn.edu" aria-label="Email">
               <Icon name="email" />
             </a>
           </li>
@@ -115,6 +115,10 @@ import { Icon } from 'astro-icon/components'
     align-items: center;
   }
 
+  a:hover {
+    color: var(--color-light-pink);
+  }
+
   a {
     transition: all var(--transition-normal);
   }
@@ -150,11 +154,6 @@ import { Icon } from 'astro-icon/components'
     }
   }
 
-  .desktop-items a:hover,
-  .desktop-icons a:hover {
-    color: var(--color-light-pink);
-  }
-
   /* Mobile */
 
   .mobile-nav {
@@ -170,10 +169,6 @@ import { Icon } from 'astro-icon/components'
   .mobile-nav a {
     color: var(--color-white);
     transition: all var(--transition-normal);
-  }
-
-  .mobile-nav a:hover {
-    color: var(--color-light-pink);
   }
 
   .hamburger {

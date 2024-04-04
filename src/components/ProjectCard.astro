@@ -14,22 +14,12 @@ export interface Props {
 const { project } = Astro.props
 ---
 
-<div class="project active" data-type={project.type}>
+<div class="project active" data-type={project.type} data-id={project.id}>
   <Icon name={project.id} />
-  <h4>
-    {
-      project.link ? (
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
-          {project.title}
-        </a>
-      ) : (
-        project.title
-      )
-    }
-  </h4>
+  <h4>{project.title}</h4>
   <div class="project-info">
     <p>{project.description}</p>
-    <button data-id={project.id}>
+    <button>
       <Icon name="arrow-right" />
     </button>
   </div>

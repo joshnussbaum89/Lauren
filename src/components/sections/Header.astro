@@ -8,7 +8,7 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 
 <header>
   <Navigation />
-  <div class="content">
+  <div class="content aos-fade">
     <div class="signature">
       <Picture
         src={curvedName}
@@ -54,15 +54,6 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 
   p {
     font-size: var(--size-md);
-  }
-
-  .content {
-    opacity: 0;
-    transition: opacity var(--transition-long);
-  }
-
-  .content.active {
-    opacity: 1;
   }
 
   @media (min-width: 1024px) {

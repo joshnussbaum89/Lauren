@@ -15,7 +15,7 @@ import { Icon } from 'astro-icon/components'
       <li><a href="/#choreography">Choreography</a></li>
     </ul>
     <ul class="desktop-icons">
-      <li><a href="/files/lauren-vogelstein-cv.pdf" aria-label="CV" download>CV</a></li>
+      <li><button class="site-button-link" data-cv>CV</button></li>
       <li>
         <a href="mailto:laurenvo@upenn.edu" aria-label="Email">
           <Icon name="email" />
@@ -50,7 +50,7 @@ import { Icon } from 'astro-icon/components'
         </ul>
         <ul class="mobile-nav-icons">
           <li>
-            <a href="/files/lauren-vogelstein-cv.pdf" aria-label="CV" download="">CV</a>
+            <button class="site-button-link" data-cv>CV</button>
           </li>
           <li>
             <a href="mailto:laurenvo@upenn.edu" aria-label="Email">
@@ -115,12 +115,12 @@ import { Icon } from 'astro-icon/components'
     align-items: center;
   }
 
-  a:hover {
-    color: var(--color-light-pink);
+  .wrapper a {
+    transition: all var(--transition-normal);
   }
 
-  a {
-    transition: all var(--transition-normal);
+  .wrapper a:hover {
+    color: var(--color-light-pink);
   }
 
   li {
@@ -269,6 +269,15 @@ import { Icon } from 'astro-icon/components'
   .mobile-nav-icons li {
     font-family: var(--font-cooper-light);
     font-size: var(--size-lg);
+  }
+
+  .mobile-nav-icons .site-button-link {
+    color: var(--color-white);
+    font-size: var(--size-lg);
+  }
+
+  .mobile-nav-icons .site-button-link:hover {
+    color: var(--color-light-pink);
   }
 
   .mobile-nav-icons [data-icon] {

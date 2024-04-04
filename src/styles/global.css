@@ -39,14 +39,6 @@
   --color-blue: #5b7eae;
   --color-box-shadow: #0000001a;
 
-  /* DRESS COLORS */
-  /* --color-green: #036a6b;
-  --color-light-green: #6fbcc4; 
-  --color-pink: #d33f33;
-  --color-light-pink: #ca81b6;
-  --color-purple: var(--color-blue); 
-  --color-blue: #0b1c34; */
-
   --size-sm: 0.875rem;
   --size-base: 1rem;
   --size-md: 1.25rem;
@@ -86,7 +78,8 @@ body {
   color: var(--color-black);
 }
 
-body[data-overlay-displayed='true'] {
+body[data-overlay-displayed='true'],
+body[data-cv-displayed='true'] {
   overflow: hidden;
 }
 
@@ -103,7 +96,8 @@ body:after {
   transition: var(--transition-normal);
 }
 
-body[data-overlay-displayed='true']:after {
+body[data-overlay-displayed='true']:after,
+body[data-cv-displayed='true']:after {
   visibility: visible;
   opacity: 1;
   -webkit-backdrop-filter: saturate(180%) blur(5px);
@@ -188,12 +182,6 @@ button {
 
 .site-section {
   padding: 10rem 1rem;
-  opacity: 0;
-  transition: opacity var(--transition-long);
-}
-
-.site-section.active {
-  opacity: 1;
 }
 
 .site-cta {
@@ -205,6 +193,7 @@ button {
   font-weight: 700;
   color: var(--color-white);
   background: var(--color-light-pink);
+  border: none;
   border-radius: 3rem;
   transition: all var(--transition-normal);
   box-shadow: var(--box-shadow-normal);
@@ -213,4 +202,27 @@ button {
 .site-cta:hover {
   color: var(--color-white);
   background: var(--color-pink);
+}
+
+.site-button-link {
+  font-family: var(--font-cooper-bold);
+  background: transparent;
+  border: none;
+  transition: all var(--transition-normal);
+}
+
+.site-button-link:hover {
+  color: var(--color-light-pink);
+}
+
+/* Animations */
+
+.aos-fade,
+.aol-fade {
+  opacity: 0;
+  transition: opacity var(--transition-long);
+
+  &.active {
+    opacity: 1;
+  }
 }

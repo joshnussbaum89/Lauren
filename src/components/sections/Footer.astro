@@ -42,6 +42,12 @@ import { Icon } from 'astro-icon/components'
   <p class="footer-text">
     &copy; <span id="copyright">{new Date().getFullYear()}</span> laurenvogelstein.com. All rights reserved.
   </p>
+  <p class="footer-text">
+    Website by
+    <a href="https://wavelandweb.com" target="_blank" rel="noopener noreferrer">
+      Wave Land Web <Icon name="arrow-top-right" /></a
+    >
+  </p>
 </footer>
 
 <style>
@@ -52,6 +58,15 @@ import { Icon } from 'astro-icon/components'
       var(--color-purple-transparent) 25%,
       var(--color-light-pink-transparent)
     );
+  }
+
+  a {
+    color: var(--color-black);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--color-light-pink);
   }
 
   .wrapper {
@@ -76,15 +91,6 @@ import { Icon } from 'astro-icon/components'
     margin-bottom: 0.5rem;
   }
 
-  .site-map a {
-    color: var(--color-black);
-    text-decoration: underline;
-  }
-
-  .site-map a:hover {
-    color: var(--color-light-pink);
-  }
-
   .icons {
     display: flex;
     align-items: center;
@@ -99,5 +105,27 @@ import { Icon } from 'astro-icon/components'
 
   .footer-text {
     text-align: center;
+  }
+
+  .footer-text a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    transition: var(--transition-normal);
+  }
+
+  .footer-text a:hover [data-icon='arrow-top-right'] {
+    stroke: var(--color-light-pink);
+  }
+
+  .footer-text [data-icon='arrow-top-right'] {
+    width: 0.5rem;
+    height: 0.5rem;
+    stroke: var(--color-black);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: var(--transition-normal);
   }
 </style>

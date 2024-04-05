@@ -855,4 +855,12 @@ const projectData = [
   tabs.forEach((tab) => tab.addEventListener('click', handleTabClick))
   projects.forEach((cta) => cta.addEventListener('click', handleProjectClick))
   modalClose?.addEventListener('click', handleCloseProject)
+  body?.addEventListener('click', (event) => {
+    const projectIsDisplayed = body.getAttribute('data-overlay-displayed') === 'true'
+    const userClickedOutsideProject = event.target === body
+
+    if (projectIsDisplayed && userClickedOutsideProject) {
+      handleCloseProject()
+    }
+  })
 </script>

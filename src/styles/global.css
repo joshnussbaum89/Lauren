@@ -179,6 +179,7 @@ img {
 button {
   font-family: var(--font-cooper-light);
   font-size: var(--size-base);
+  color: var(--color-black);
   cursor: pointer;
 }
 

@@ -602,9 +602,9 @@ const projectData = [
 <div class="projects">
   <h3>Projects</h3>
   <div class="tab-container">
-    <span class="tab active" data-type="all">/All</span>
-    <span class="tab" data-type="current">/Current</span>
-    <span class="tab" data-type="previous">/Previous</span>
+    <button class="tab active" data-type="all">/All</button>
+    <button class="tab" data-type="current">/Current</button>
+    <button class="tab" data-type="previous">/Previous</button>
   </div>
 
   <div class="project-container">
@@ -658,6 +658,8 @@ const projectData = [
     margin-right: 1rem;
     font-size: var(--size-lg);
     transition: all var(--transition-normal);
+    background-color: transparent;
+    border: none;
     cursor: pointer;
   }
 
@@ -730,6 +732,20 @@ const projectData = [
     }
   }
 
+  .modal-info p,
+  .modal-info li,
+  .modal-info a {
+    font-size: var(--size-sm);
+  }
+
+  @media (min-width: 768px) {
+    .modal-info p,
+    .modal-info li,
+    .modal-info a {
+      font-size: var(--size-base);
+    }
+  }
+
   .close {
     position: absolute;
     top: 1.5rem;
@@ -766,12 +782,13 @@ const projectData = [
   }
 
   .modal-html h4 {
-    font-size: var(--size-lg);
+    font-size: var(--size-base);
     max-width: 275px;
   }
 
   @media (min-width: 576px) {
     .modal-html h4 {
+      font-size: var(--size-lg);
       max-width: none;
     }
   }

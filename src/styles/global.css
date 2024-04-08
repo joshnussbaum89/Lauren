@@ -25,6 +25,7 @@
   --color-black: #000000;
   --color-grey: #f5f5f5;
   --color-grey-dark: #e5e5e5;
+  --color-grey-text: #bababa;
   --color-white: #ffffff;
   --color-white-transparent: #ffffff50;
   --color-green: #283700;
@@ -76,6 +77,7 @@ body {
   font-family: var(--font-cooper-light);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
   color: var(--color-black);
 }
 
@@ -113,7 +115,6 @@ h5 {
   margin: 0;
   color: var(--color-black);
   font-family: var(--font-cooper-bold);
-  line-height: 1.2;
 
   /* Experimental, but fallback is default styling */
   text-wrap: balance;
@@ -150,7 +151,6 @@ p {
   margin: 0;
   padding: 0;
   font-size: var(--size-base);
-  line-height: 1.8;
 
   /* Experimental, but fallback is default styling */
   text-wrap: pretty;

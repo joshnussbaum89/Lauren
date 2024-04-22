@@ -40,10 +40,6 @@
       </p>
       <p>NSF Funded Grant</p>
     </div>
-    <div class="space-between">
-      <p>Equity Centered Learning Environments Collaborative</p>
-      <p>Lucas Foundation Funded Initiative</p>
-    </div>
     <p>PIs Yasmin Kafai (University of Pennsylvania) & Danaë Metaxa (University of Pennsylvania)</p>
   </div>
 
@@ -737,7 +733,7 @@
   </div>
 
   <div class="content-container">
-    <h2>Manuscripts Currently In Preparation</h2>
+    <h2>Peer Reviewed Conference Presentations</h2>
     <ol>
       <li>
         Wagh, A., <strong>Vogelstein, L.</strong>, & Champion, D. (March, 2024). <em
@@ -1551,223 +1547,221 @@
       </div>
     </div>
   </div>
+</div>
 
-  <style>
-    /* CV styles */
+<style>
+  .cv {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -100;
+    top: 50%;
+    left: 1rem;
+    right: 1rem;
+    max-height: 90%;
+    overflow: auto;
+    transform: translate(0, -45%);
+    transition: all var(--transition-normal);
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border: 1px solid var(--color-black);
+    border-radius: 1.25rem;
+    box-shadow: var(--box-shadow-normal);
+  }
 
+  @media (min-width: 768px) {
     .cv {
-      position: fixed;
-      visibility: hidden;
-      opacity: 0;
-      z-index: -100;
-      top: 50%;
-      left: 1rem;
-      right: 1rem;
-      max-height: 90%;
-      overflow: auto;
-      transform: translate(0, -45%);
-      transition: all var(--transition-normal);
-      background-color: var(--color-white);
-      padding: 1.5rem;
-      border: 1px solid var(--color-black);
-      border-radius: 1.25rem;
-      box-shadow: var(--box-shadow-normal);
+      left: 50%;
+      transform: translate(-50%, -45%);
+      width: 100%;
+      max-width: 600px;
+      padding: 2rem;
     }
+  }
 
-    @media (min-width: 768px) {
-      .cv {
-        left: 50%;
-        transform: translate(-50%, -45%);
-        width: 100%;
-        max-width: 600px;
-        padding: 2rem;
-      }
-    }
+  .cv.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+    transform: translate(0, -50%);
+  }
 
+  @media (min-width: 768px) {
     .cv.active {
-      visibility: visible;
-      opacity: 1;
-      z-index: 1000;
-      transform: translate(0, -50%);
+      transform: translate(-50%, -50%);
     }
+  }
 
-    @media (min-width: 768px) {
-      .cv.active {
-        transform: translate(-50%, -50%);
-      }
-    }
+  .cv p,
+  .cv li,
+  .cv a {
+    font-size: var(--size-sm);
+  }
 
+  @media (min-width: 768px) {
     .cv p,
     .cv li,
     .cv a {
-      font-size: var(--size-sm);
-    }
-
-    @media (min-width: 768px) {
-      .cv p,
-      .cv li,
-      .cv a {
-        font-size: var(--size-base);
-      }
-    }
-
-    .close {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      padding: 0.75rem;
-      border: 1px solid var(--color-black);
-      border-radius: 50%;
-    }
-
-    .close:hover {
-      background-color: var(--color-black);
-    }
-
-    .close svg {
-      width: 1rem;
-      height: 1rem;
-      stroke: var(--color-black);
-    }
-
-    .close:hover path {
-      stroke: var(--color-white);
-    }
-
-    .content-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 2rem 0;
-      overflow-wrap: break-word;
-      border-bottom: 1px solid var(--color-grey-dark);
-    }
-
-    .content-container:first-of-type {
-      padding-top: 2rem;
-    }
-
-    .content-container:last-of-type {
-      padding-bottom: 2rem;
-      border-bottom: none;
-    }
-
-    .content-container h2 {
       font-size: var(--size-base);
-      text-align: left;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0.75rem;
+    border: 1px solid var(--color-black);
+    border-radius: 50%;
+  }
+
+  .close:hover {
+    background-color: var(--color-black);
+  }
+
+  .close svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: var(--color-black);
+  }
+
+  .close:hover path {
+    stroke: var(--color-white);
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+    overflow-wrap: break-word;
+    border-bottom: 1px solid var(--color-grey-dark);
+  }
+
+  .content-container:first-of-type {
+    padding-top: 2rem;
+  }
+
+  .content-container:last-of-type {
+    padding-bottom: 2rem;
+    border-bottom: none;
+  }
+
+  .content-container h2 {
+    font-size: var(--size-base);
+    text-align: left;
+  }
+
+  .content-container h3 {
+    font-size: var(--size-sm);
+    color: var(--color-grey-text);
+  }
+
+  @media (min-width: 768px) {
+    .content-container h2 {
+      font-size: var(--size-lg);
     }
 
     .content-container h3 {
-      font-size: var(--size-sm);
-      color: var(--color-grey-text);
+      font-size: var(--size-base);
     }
+  }
 
-    @media (min-width: 768px) {
-      .content-container h2 {
-        font-size: var(--size-lg);
-      }
+  .content-container ol,
+  .content-container ul {
+    padding-left: 1rem;
+  }
 
-      .content-container h3 {
-        font-size: var(--size-base);
-      }
-    }
+  .content-container ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: decimal;
+  }
 
-    .content-container ol,
-    .content-container ul {
-      padding-left: 1rem;
-    }
+  .content-container ul {
+    list-style-type: disc;
+  }
 
-    .content-container ol {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      list-style-type: decimal;
-    }
+  .space-between,
+  .two-columns,
+  .three-columns {
+    display: grid;
+    gap: 1rem;
+  }
 
-    .content-container ul {
-      list-style-type: disc;
-    }
+  .space-between p:last-child,
+  .three-columns .col-3 {
+    text-align: end;
+  }
 
-    .space-between,
-    .two-columns,
-    .three-columns {
-      display: grid;
-      gap: 1rem;
-    }
+  .space-between {
+    grid-template-columns: 2fr 1fr;
+  }
 
-    .space-between p:last-child,
-    .three-columns .col-3 {
-      text-align: end;
-    }
+  .two-columns {
+    grid-template-columns: 90px 1fr;
+  }
 
-    .space-between {
-      grid-template-columns: 2fr 1fr;
-    }
+  .three-columns {
+    grid-template-columns: 90px 1fr 90px;
+  }
 
+  @media (min-width: 768px) {
     .two-columns {
-      grid-template-columns: 90px 1fr;
+      grid-template-columns: 100px 1fr;
     }
 
     .three-columns {
-      grid-template-columns: 90px 1fr 90px;
+      grid-template-columns: 100px 1fr 100px;
     }
+  }
+</style>
 
-    @media (min-width: 768px) {
-      .two-columns {
-        grid-template-columns: 100px 1fr;
-      }
+<script>
+  const body = document.querySelector('body')
+  const cv = document.querySelector('.cv')
+  const cvButtons = document.querySelectorAll('[data-cv]')
+  const cvClose = document.querySelector('.close')
 
-      .three-columns {
-        grid-template-columns: 100px 1fr 100px;
-      }
+  /**
+   * On CV button click, show CV
+   */
+  function handleOpenCV() {
+    cv?.classList.add('active')
+    body?.setAttribute('data-overlay-displayed', 'true')
+    body?.setAttribute('data-cv-displayed', 'true')
+  }
+
+  /**
+   * Close CV
+   */
+  function handleCloseCV() {
+    cv?.classList.remove('active')
+    body?.setAttribute('data-overlay-displayed', 'false')
+    body?.setAttribute('data-cv-displayed', 'false')
+  }
+
+  // Accessibility
+  body?.addEventListener('keyup', (event) => {
+    if (event.code === 'Escape') {
+      handleCloseCV()
     }
-  </style>
+  })
 
-  <script>
-    const body = document.querySelector('body')
-    const cv = document.querySelector('.cv')
-    const cvButtons = document.querySelectorAll('[data-cv]')
-    const cvClose = document.querySelector('.close')
+  // Event Listeners
+  cvButtons?.forEach((button) => button?.addEventListener('click', handleOpenCV))
+  cvClose?.addEventListener('click', handleCloseCV)
+  body?.addEventListener('click', (event) => {
+    const CVIsDisplayed = body.getAttribute('data-cv-displayed') === 'true'
+    const userClickedOutsideCV = event.target === body
 
-    /**
-     * On CV button click, show CV
-     */
-    function handleOpenCV() {
-      cv?.classList.add('active')
-      body?.setAttribute('data-overlay-displayed', 'true')
-      body?.setAttribute('data-cv-displayed', 'true')
+    if (CVIsDisplayed && userClickedOutsideCV) {
+      handleCloseCV()
     }
-
-    /**
-     * Close CV
-     */
-    function handleCloseCV() {
-      cv?.classList.remove('active')
-      body?.setAttribute('data-overlay-displayed', 'false')
-      body?.setAttribute('data-cv-displayed', 'false')
-    }
-
-    // Accessibility
-    body?.addEventListener('keyup', (event) => {
-      if (event.code === 'Escape') {
-        handleCloseCV()
-      }
-    })
-
-    // Event Listeners
-    cvButtons?.forEach((button) => button?.addEventListener('click', handleOpenCV))
-    cvClose?.addEventListener('click', handleCloseCV)
-    body?.addEventListener('click', (event) => {
-      const CVIsDisplayed = body.getAttribute('data-cv-displayed') === 'true'
-      const userClickedOutsideCV = event.target === body
-
-      if (CVIsDisplayed && userClickedOutsideCV) {
-        handleCloseCV()
-      }
-    })
-  </script>
-</div>
+  })
+</script>

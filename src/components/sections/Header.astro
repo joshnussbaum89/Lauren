@@ -32,7 +32,9 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
           I design and study STEAM learning environments where the A in STEAM is as respected as the
           STEM disciplines involved. In particular, I explore how collaborating with dancers and
           choreographers on the design and analysis of STEAM spaces can leverage artistic,
-          choreographic research as rigorous forms of collective learning.
+          choreographic research as rigorous forms of collective learning. I have extended this
+          research as a Co-PI on the Choreographing Science Project, an NSF AISL grant ($858,997,
+          Award #2115773).
         </p>
         <p>
           Currently, I am a postdoctoral associate at the University of Pennsylvania in the Graduate
@@ -53,7 +55,11 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
   }
 
   p {
-    font-size: var(--size-md);
+    font-size: clamp(var(--size-sm), 2.5vh, var(--size-md));
+  }
+
+  .content {
+    padding: 2rem 0 0;
   }
 
   @media (min-width: 1024px) {
@@ -68,6 +74,7 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 
   .signature {
     height: 100vh;
+    max-height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -104,16 +111,10 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 
   @media (min-width: 1024px) {
     .info {
-      padding: 4rem 1rem;
+      padding: 2rem 1rem;
       text-align: left;
       color: var(--color-white);
       background-color: transparent;
-    }
-  }
-
-  @media (min-width: 1024px) and (max-height: 700px) {
-    .info {
-      margin-bottom: 2rem;
     }
   }
 

@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'always',
   },
-  integrations: [icon(), sitemap()],
+  integrations: [icon(), sitemap({ lastmod: new Date() })],
 })

@@ -1,5 +1,6 @@
 ---
 import CV from '../components/CV.astro'
+import Footer from '../components/sections/Footer.astro'
 import '../styles/global.css'
 
 export interface Props {
@@ -57,5 +58,6 @@ const socialImageURL = new URL('/headshot.png', canonicalURL)
   <body>
     <CV />
     <slot />
+    <Footer />
   </body>
 </html>

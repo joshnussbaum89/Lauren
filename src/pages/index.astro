@@ -9,7 +9,6 @@ import SectionDivider from '../components/SectionDivider.astro'
 import About from '../components/sections/About.astro'
 import Choreography from '../components/sections/Choreography.astro'
 import Commitments from '../components/sections/Commitments.astro'
-import Footer from '../components/sections/Footer.astro'
 import Header from '../components/sections/Header.astro'
 import Research from '../components/sections/Research.astro'
 import Teaching from '../components/sections/Teaching.astro'
@@ -51,5 +50,4 @@ const dividerFiveImage = await getImage({ src: dividerChoreography })
     <SectionDivider title="Choreography" imageUrl={dividerFiveImage.src} isArrow={true} />
     <Choreography />
   </main>
-  <Footer />
 </Layout>

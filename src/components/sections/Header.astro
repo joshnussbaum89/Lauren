@@ -37,11 +37,15 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
           Award #2115773).
         </p>
         <p>
-          Currently, I am a postdoctoral associate at the University of Pennsylvania in the Graduate
-          School of Education. I recently finished up a postdoctoral fellowship at NYU in the
-          department of Teaching and Learning. Before that, I received my PhD in Learning & Design
-          from Vanderbilt University and my BFA in Dance & Choreography from the Ailey/Fordham BFA
-          program.
+          Currently, I am a Visiting Assistant Professor in the Dance Education Program and
+          Affiliated Researcher in the Arnhold Institute for Dance Education Research, Policy, &
+          Leadership at Teachers College, Columbia University. I recently finished two postdoctoral
+          fellowships at the University of Pennsylvania Graduate School of Education (mentored by
+          Drs. Yasmin Kafai & Danaë Metaxa) and NYU in the department of Teaching and Learning
+          (mentored by Drs. Jasmine Ma & Christopher Hoadley). Before that, I received my PhD in
+          Learning & Design from Vanderbilt University (mentored by Drs. Rogers Hall & Corey Brady)
+          and my BFA in Dance & Choreography from the Ailey/Fordham BFA program (mentored by Kazuko
+          Hirabayashi).
         </p>
       </div>
     </div>
@@ -55,11 +59,7 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
   }
 
   p {
-    font-size: clamp(var(--size-sm), 2.5vh, var(--size-md));
-  }
-
-  .content {
-    padding: 2rem 0 0;
+    font-size: clamp(var(--size-sm), 2.5vw, var(--size-base));
   }
 
   @media (min-width: 1024px) {
@@ -74,7 +74,6 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 
   .signature {
     height: 100vh;
-    max-height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -111,7 +110,7 @@ import RotatingTitles from '../animations/RotatingTitles.astro'
 
   @media (min-width: 1024px) {
     .info {
-      padding: 2rem 1rem;
+      padding: 4rem 1rem;
       text-align: left;
       color: var(--color-white);
       background-color: transparent;

@@ -4,6 +4,7 @@ import childhoodImage from '../../assets/childhood.png'
 import collegeImage from '../../assets/college.png'
 import teachingImage from '../../assets/teaching.png'
 import graduateSchoolImage from '../../assets/graduate-school.png'
+import postdoctoralImage from '../../assets/postdoctoral.png'
 import currentlyImage from '../../assets/currently.png'
 ---
 
@@ -13,6 +14,7 @@ import currentlyImage from '../../assets/currently.png'
     <button data-category="college">College</button>
     <button data-category="teaching">Teaching</button>
     <button data-category="graduate-school">Graduate School</button>
+    <button data-category="postdoctoral">Postdoctoral</button>
     <button class="active" data-category="currently">Currently</button>
   </div>
 
@@ -84,6 +86,29 @@ import currentlyImage from '../../assets/currently.png'
       >.
     </p>
   </div>
+  <div class="post" data-category="postdoctoral">
+    <ImageCard title="Postdoctoral" image={postdoctoralImage} theme="blue" alt="Postdoctoral" />
+    <p>
+      From 2023-2024 I was a postdoctoral associate at the University of Pennsylvania working with
+      Drs. Yasmin Kafai & Danaë Metaxa on an NSF funded ITEST project (2333469) to study what high
+      schoolers already know about biases in Artificial Intelligence and Machine Learning systems
+      from their everyday uses and how to support further learning about biases in these systems.
+      This work foregrounded youths' critical perspectives on how technologies (mis)represent their
+      bodies, which informs my research bringing agent based computational modeling and
+      choreographic modeling practices together.
+    </p>
+    <p>
+      From 2022-2024 I was funded by the George Lucas Educational Foundation as a postdoctoral
+      associate on the study of equitable learning environments. Through this fellowship I was a
+      postdoctoral associate at New York University and worked with Drs. Jasmine Ma, Christopher
+      Hoadley (University of Buffalo), & Laura Ascenzi-Moreno (Brooklyn College) on an NSF funded
+      project (1837446) that studied how to support teachers to incorporate Computer Science into
+      their classrooms by foregrounding the needs and translanguaging expertise of bi/multilingual
+      learners. This work foregrounded the use of syncretism as a theoretical and design framework
+      for designing expressive and expansive learning environments, which informs my research
+      bringing dance and STEM disciplines together in syncretic ways.
+    </p>
+  </div>
   <div class="post active" data-category="currently">
     <ImageCard
       title="Currently"
@@ -92,12 +117,13 @@ import currentlyImage from '../../assets/currently.png'
       alt="Lauren and her postdoctoral fellows at NYU"
     />
     <p>
-      I am a postdoctoral associate at the University of Pennsylvania working with Dr. Yasmin Kafai
-      on an NSF funded ITEST project to study what high schoolers already know about biases in
-      Artificial Intelligence and Machine Learning systems from their everyday uses and how to
-      support further learning about biases in these systems. This work foregrounds youths' critical
-      perspectives on how technologies (mis)represent their bodies, which informs my research
-      bringing agent based computational modeling and choreographic modeling practices together.
+      I am a Visiting Assistant Professor in the Dance Education Doctorate Program at Teachers
+      College, Columbia University. In this role, I advise doctorate students as well as teach
+      courses that support students in narrowing down their dissertation topics (Doctoral Seminar 1)
+      and introduce students to embodied, qualitative methods of research in which students identify
+      a puzzling phenomenon from their experience as artists and dance educators and practice
+      methods of data collection and analysis to begin to disentangle and explain their phenomena
+      (Studio Seminar).
     </p>
     <p>
       I am also a co-PI on the three-year NSF AISL project Choreographing Science <a
@@ -174,7 +200,6 @@ import currentlyImage from '../../assets/currently.png'
 
   .post p {
     margin-bottom: 1rem;
-    font-size: var(--size-md);
   }
 
   .post p:last-child {
